@@ -1,14 +1,13 @@
-"use client";
-import React from "react";
-import { Product } from "@/types/product";
-import { useModalContext } from "@/app/context/QuickViewModalContext";
-import { updateQuickView } from "@/redux/features/quickView-slice";
-import { addItemToCart } from "@/redux/features/cart-slice";
-import { addItemToWishlist } from "@/redux/features/wishlist-slice";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "@/redux/store";
-import Link from "next/link";
-import Image from "next/image";
+'use client';
+import { useModalContext } from '@/app/context/QuickViewModalContext';
+import { addItemToCart } from '@/redux/features/cart-slice';
+import { updateQuickView } from '@/redux/features/quickView-slice';
+import { addItemToWishlist } from '@/redux/features/wishlist-slice';
+import { AppDispatch } from '@/redux/store';
+import { Product } from '@/types/product';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useDispatch } from 'react-redux';
 
 const SingleGridItem = ({ item }: { item: Product }) => {
   const { openModal } = useModalContext();
@@ -25,7 +24,7 @@ const SingleGridItem = ({ item }: { item: Product }) => {
     dispatch(
       addItemToCart({
         ...item,
-        quantity: 1,
+        quantity: 1
       })
     );
   };
@@ -34,18 +33,18 @@ const SingleGridItem = ({ item }: { item: Product }) => {
     dispatch(
       addItemToWishlist({
         ...item,
-        status: "available",
-        quantity: 1,
+        status: 'available',
+        quantity: 1
       })
     );
   };
 
   return (
     <div className="group">
-      <div className="relative overflow-hidden flex items-center justify-center rounded-lg bg-white shadow-1 min-h-[270px] mb-4">
-        <Image src={item.imgs.previews[0]} alt="" width={250} height={250} />
+      <div className="relative mb-4 flex min-h-[270px] items-center justify-center overflow-hidden rounded-lg bg-white shadow-1">
+        <Image src={item?.imgs?.previews[0] || ''} alt="" width={250} height={250} />
 
-        <div className="absolute left-0 bottom-0 translate-y-full w-full flex items-center justify-center gap-2.5 pb-5 ease-linear duration-200 group-hover:translate-y-0">
+        <div className="absolute bottom-0 left-0 flex w-full translate-y-full items-center justify-center gap-2.5 pb-5 duration-200 ease-linear group-hover:translate-y-0">
           <button
             onClick={() => {
               openModal();
@@ -53,7 +52,7 @@ const SingleGridItem = ({ item }: { item: Product }) => {
             }}
             id="newOne"
             aria-label="button for quick view"
-            className="flex items-center justify-center w-9 h-9 rounded-[5px] shadow-1 ease-out duration-200 text-dark bg-white hover:text-blue"
+            className="flex h-9 w-9 items-center justify-center rounded-[5px] bg-white text-dark shadow-1 duration-200 ease-out hover:text-blue"
           >
             <svg
               className="fill-current"
@@ -80,7 +79,7 @@ const SingleGridItem = ({ item }: { item: Product }) => {
 
           <button
             onClick={() => handleAddToCart()}
-            className="inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-[5px] bg-blue text-white ease-out duration-200 hover:bg-blue-dark"
+            className="inline-flex rounded-[5px] bg-blue px-5 py-[7px] text-custom-sm font-medium text-white duration-200 ease-out hover:bg-blue-dark"
           >
             Add to cart
           </button>
@@ -89,7 +88,7 @@ const SingleGridItem = ({ item }: { item: Product }) => {
             onClick={() => handleItemToWishList()}
             aria-label="button for favorite select"
             id="favOne"
-            className="flex items-center justify-center w-9 h-9 rounded-[5px] shadow-1 ease-out duration-200 text-dark bg-white hover:text-blue"
+            className="flex h-9 w-9 items-center justify-center rounded-[5px] bg-white text-dark shadow-1 duration-200 ease-out hover:text-blue"
           >
             <svg
               className="fill-current"
@@ -110,48 +109,23 @@ const SingleGridItem = ({ item }: { item: Product }) => {
         </div>
       </div>
 
-      <div className="flex items-center gap-2.5 mb-2">
+      <div className="mb-2 flex items-center gap-2.5">
         <div className="flex items-center gap-1">
-          <Image
-            src="/images/icons/icon-star.svg"
-            alt="star icon"
-            width={15}
-            height={15}
-          />
-          <Image
-            src="/images/icons/icon-star.svg"
-            alt="star icon"
-            width={15}
-            height={15}
-          />
-          <Image
-            src="/images/icons/icon-star.svg"
-            alt="star icon"
-            width={15}
-            height={15}
-          />
-          <Image
-            src="/images/icons/icon-star.svg"
-            alt="star icon"
-            width={15}
-            height={15}
-          />
-          <Image
-            src="/images/icons/icon-star.svg"
-            alt="star icon"
-            width={15}
-            height={15}
-          />
+          <Image src="/images/icons/icon-star.svg" alt="star icon" width={15} height={15} />
+          <Image src="/images/icons/icon-star.svg" alt="star icon" width={15} height={15} />
+          <Image src="/images/icons/icon-star.svg" alt="star icon" width={15} height={15} />
+          <Image src="/images/icons/icon-star.svg" alt="star icon" width={15} height={15} />
+          <Image src="/images/icons/icon-star.svg" alt="star icon" width={15} height={15} />
         </div>
 
         <p className="text-custom-sm">({item.reviews})</p>
       </div>
 
-      <h3 className="font-medium text-dark ease-out duration-200 hover:text-blue mb-1.5">
+      <h3 className="mb-1.5 font-medium text-dark duration-200 ease-out hover:text-blue">
         <Link href="/shop-details"> {item.title} </Link>
       </h3>
 
-      <span className="flex items-center gap-2 font-medium text-lg">
+      <span className="flex items-center gap-2 text-lg font-medium">
         <span className="text-dark">${item.discountedPrice}</span>
         <span className="text-dark-4 line-through">${item.price}</span>
       </span>

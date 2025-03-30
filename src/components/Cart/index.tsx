@@ -1,11 +1,11 @@
-"use client";
-import React from "react";
-import Discount from "./Discount";
-import OrderSummary from "./OrderSummary";
-import { useAppSelector } from "@/redux/store";
-import SingleItem from "./SingleItem";
-import Breadcrumb from "../Common/Breadcrumb";
-import Link from "next/link";
+'use client';
+import React from 'react';
+import Discount from './Discount';
+import OrderSummary from './OrderSummary';
+import { useAppSelector } from '@/redux/store';
+import SingleItem from './SingleItem';
+import Breadcrumb from '../Common/Breadcrumb';
+import Link from 'next/link';
 
 const Cart = () => {
   const cartItems = useAppSelector((state) => state.cartReducer.items);
@@ -14,22 +14,22 @@ const Cart = () => {
     <>
       {/* <!-- ===== Breadcrumb Section Start ===== --> */}
       <section>
-        <Breadcrumb title={"Cart"} pages={["Cart"]} />
+        <Breadcrumb title={'Cart'} pages={['Cart']} />
       </section>
       {/* <!-- ===== Breadcrumb Section End ===== --> */}
       {cartItems.length > 0 ? (
-        <section className="overflow-hidden py-20 bg-gray-2">
-          <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-            <div className="flex flex-wrap items-center justify-between gap-5 mb-7.5">
-              <h2 className="font-medium text-dark text-2xl">Your Cart</h2>
+        <section className="overflow-hidden bg-gray-2 py-20">
+          <div className="mx-auto w-full max-w-[1170px] px-4 sm:px-8 xl:px-0">
+            <div className="mb-7.5 flex flex-wrap items-center justify-between gap-5">
+              <h2 className="text-2xl font-medium text-dark">Your Cart</h2>
               <button className="text-blue">Clear Shopping Cart</button>
             </div>
 
-            <div className="bg-white rounded-[10px] shadow-1">
+            <div className="rounded-[10px] bg-white shadow-1">
               <div className="w-full overflow-x-auto">
                 <div className="min-w-[1170px]">
                   {/* <!-- table header --> */}
-                  <div className="flex items-center py-5.5 px-7.5">
+                  <div className="flex items-center px-7.5 py-5.5">
                     <div className="min-w-[400px]">
                       <p className="text-dark">Product</p>
                     </div>
@@ -47,20 +47,18 @@ const Cart = () => {
                     </div>
 
                     <div className="min-w-[50px]">
-                      <p className="text-dark text-right">Action</p>
+                      <p className="text-right text-dark">Action</p>
                     </div>
                   </div>
 
                   {/* <!-- cart item --> */}
                   {cartItems.length > 0 &&
-                    cartItems.map((item, key) => (
-                      <SingleItem item={item} key={key} />
-                    ))}
+                    cartItems.map((item, key) => <SingleItem item={item} key={key} />)}
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-7.5 xl:gap-11 mt-9">
+            <div className="mt-9 flex flex-col gap-7.5 lg:flex-row xl:gap-11">
               <Discount />
               <OrderSummary />
             </div>
@@ -68,7 +66,7 @@ const Cart = () => {
         </section>
       ) : (
         <>
-          <div className="text-center mt-8">
+          <div className="mt-8 text-center">
             <div className="mx-auto pb-7.5">
               <svg
                 className="mx-auto"
@@ -104,7 +102,7 @@ const Cart = () => {
 
             <Link
               href="/shop-with-sidebar"
-              className="w-96 mx-auto flex justify-center font-medium text-white bg-dark py-[13px] px-6 rounded-md ease-out duration-200 hover:bg-opacity-95"
+              className="mx-auto flex w-96 justify-center rounded-md bg-dark px-6 py-[13px] font-medium text-white duration-200 ease-out hover:bg-opacity-95"
             >
               Continue Shopping
             </Link>

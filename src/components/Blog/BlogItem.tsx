@@ -1,48 +1,36 @@
-import React from "react";
-import { BlogItem } from "@/types/blogItem";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import { BlogItem } from '@/types/blogItem';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const BlogItem = ({ blog }: { blog: BlogItem }) => {
   return (
-    <div className="shadow-1 bg-white rounded-xl px-4 sm:px-5 pt-5 pb-4">
-      <Link href="/blogs/blog-details" className="rounded-md overflow-hidden">
-        <Image
-          src={blog.img}
-          alt="blog"
-          className="rounded-md w-full"
-          width={330}
-          height={210}
-        />
+    <div className="rounded-xl bg-white px-4 pb-4 pt-5 shadow-1 sm:px-5">
+      <Link href="/blogs/blog-details" className="overflow-hidden rounded-md">
+        <Image src={blog.img} alt="blog" className="w-full rounded-md" width={330} height={210} />
       </Link>
 
       <div className="mt-5.5">
-        <span className="flex items-center gap-3 mb-2.5">
-          <a
-            href="#"
-            className="text-custom-sm ease-out duration-200 hover:text-blue"
-          >
+        <span className="mb-2.5 flex items-center gap-3">
+          <a href="#" className="text-custom-sm duration-200 ease-out hover:text-blue">
             {blog.date}
           </a>
 
           {/* <!-- divider --> */}
-          <span className="block w-px h-4 bg-gray-4"></span>
+          <span className="block h-4 w-px bg-gray-4"></span>
 
-          <a
-            href="#"
-            className="text-custom-sm ease-out duration-200 hover:text-blue"
-          >
+          <a href="#" className="text-custom-sm duration-200 ease-out hover:text-blue">
             {blog.views} Views
           </a>
         </span>
 
-        <h2 className="font-medium text-dark text-lg sm:text-xl ease-out duration-200 mb-4 hover:text-blue">
+        <h2 className="mb-4 text-lg font-medium text-dark duration-200 ease-out hover:text-blue sm:text-xl">
           <Link href="/blogs/blog-details">{blog.title}</Link>
         </h2>
 
         <Link
           href="/blogs/blog-details"
-          className="text-custom-sm inline-flex items-center gap-2 py-2 ease-out duration-200 hover:text-blue"
+          className="inline-flex items-center gap-2 py-2 text-custom-sm duration-200 ease-out hover:text-blue"
         >
           Read More
           <svg

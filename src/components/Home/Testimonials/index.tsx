@@ -1,16 +1,16 @@
-"use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { useCallback, useRef } from "react";
-import testimonialsData from "./testimonialsData";
-import Image from "next/image";
+'use client';
+import Image from 'next/image';
+import { useCallback, useRef } from 'react';
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
+import testimonialsData from './testimonialsData';
 
 // Import Swiper styles
-import "swiper/css/navigation";
-import "swiper/css";
-import SingleItem from "./SingleItem";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import SingleItem from './SingleItem';
 
 const Testimonials = () => {
-  const sliderRef = useRef(null);
+  const sliderRef = useRef<SwiperRef>(null);
 
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
@@ -24,22 +24,17 @@ const Testimonials = () => {
 
   return (
     <section className="overflow-hidden pb-16.5">
-      <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
+      <div className="mx-auto w-full max-w-[1170px] px-4 sm:px-8 xl:px-0">
         <div className="">
           <div className="swiper testimonial-carousel common-carousel p-5">
             {/* <!-- section title --> */}
             <div className="mb-10 flex items-center justify-between">
               <div>
-                <span className="flex items-center gap-2.5 font-medium text-dark mb-1.5">
-                  <Image
-                    src="/images/icons/icon-08.svg"
-                    alt="icon"
-                    width={17}
-                    height={17}
-                  />
+                <span className="mb-1.5 flex items-center gap-2.5 font-medium text-dark">
+                  <Image src="/images/icons/icon-08.svg" alt="icon" width={17} height={17} />
                   Testimonials
                 </span>
-                <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
+                <h2 className="text-xl font-semibold text-dark xl:text-heading-5">
                   User Feedbacks
                 </h2>
               </div>
@@ -90,16 +85,16 @@ const Testimonials = () => {
               breakpoints={{
                 // when window width is >= 640px
                 0: {
-                  slidesPerView: 1,
+                  slidesPerView: 1
                 },
                 1000: {
-                  slidesPerView: 2,
+                  slidesPerView: 2
                   // spaceBetween: 4,
                 },
                 // when window width is >= 768px
                 1200: {
-                  slidesPerView: 3,
-                },
+                  slidesPerView: 3
+                }
               }}
             >
               {testimonialsData.map((item, key) => (

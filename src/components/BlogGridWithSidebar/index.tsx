@@ -1,59 +1,59 @@
-import React from "react";
-import Breadcrumb from "../Common/Breadcrumb";
-import BlogItem from "../Blog/BlogItem";
-import blogData from "../BlogGrid/blogData"; 
-import SearchForm from "../Blog/SearchForm"; 
-import LatestPosts from "../Blog/LatestPosts";
-import LatestProducts from "../Blog/LatestProducts";
-import Categories from "../Blog/Categories";
-import shopData from "../Shop/shopData"; 
- 
+import React from 'react';
+import Breadcrumb from '../Common/Breadcrumb';
+import BlogItem from '../Blog/BlogItem';
+import blogData from '../BlogGrid/blogData';
+import SearchForm from '../Blog/SearchForm';
+import LatestPosts from '../Blog/LatestPosts';
+import LatestProducts from '../Blog/LatestProducts';
+import Categories from '../Blog/Categories';
+import shopData from '../Shop/shopData';
+
 const BlogGridWithSidebar = () => {
   const categories = [
     {
-      name: "Desktop",
-      products: 10,
+      name: 'Desktop',
+      products: 10
     },
     {
-      name: "Laptop",
-      products: 12,
+      name: 'Laptop',
+      products: 12
     },
     {
-      name: "Monitor",
-      products: 30,
+      name: 'Monitor',
+      products: 30
     },
     {
-      name: "UPS",
-      products: 23,
+      name: 'UPS',
+      products: 23
     },
     {
-      name: "Phone",
-      products: 10,
+      name: 'Phone',
+      products: 10
     },
     {
-      name: "Watch",
-      products: 13,
-    },
+      name: 'Watch',
+      products: 13
+    }
   ];
 
   return (
     <>
-      <Breadcrumb title={"Blog Grid Sidebar"} pages={["blog grid sidebar"]} />
+      <Breadcrumb title={'Blog Grid Sidebar'} pages={['blog grid sidebar']} />
 
-      <section className="overflow-hidden py-20 bg-gray-2">
-        <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-          <div className="flex flex-col lg:flex-row gap-7.5">
+      <section className="overflow-hidden bg-gray-2 py-20">
+        <div className="mx-auto w-full max-w-[1170px] px-4 sm:px-8 xl:px-0">
+          <div className="flex flex-col gap-7.5 lg:flex-row">
             {/* <!-- blog grid --> */}
-            <div className="lg:max-w-[770px] w-full">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-10 gap-x-7.5">
+            <div className="w-full lg:max-w-[770px]">
+              <div className="grid grid-cols-1 gap-x-7.5 gap-y-10 sm:grid-cols-2">
                 {blogData.map((blog, key) => (
                   <BlogItem blog={blog} key={key} />
                 ))}
               </div>
 
               {/* <!-- Blog Pagination Start --> */}
-              <div className="flex justify-center mt-15">
-                <div className="bg-white shadow-1 rounded-md p-2">
+              <div className="mt-15 flex justify-center">
+                <div className="rounded-md bg-white p-2 shadow-1">
                   <ul className="flex items-center">
                     <li>
                       <button
@@ -61,7 +61,7 @@ const BlogGridWithSidebar = () => {
                         aria-label="button for pagination left"
                         type="button"
                         disabled
-                        className="flex items-center justify-center w-8 h-9 ease-out duration-200 rounded-[3px disabled:text-gray-4"
+                        className="rounded-[3px flex h-9 w-8 items-center justify-center duration-200 ease-out disabled:text-gray-4"
                       >
                         <svg
                           className="fill-current"
@@ -82,7 +82,7 @@ const BlogGridWithSidebar = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] bg-blue text-white hover:text-white hover:bg-blue"
+                        className="flex rounded-[3px] bg-blue px-3.5 py-1.5 text-white duration-200 hover:bg-blue hover:text-white"
                       >
                         1
                       </a>
@@ -91,7 +91,7 @@ const BlogGridWithSidebar = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
+                        className="flex rounded-[3px] px-3.5 py-1.5 duration-200 hover:bg-blue hover:text-white"
                       >
                         2
                       </a>
@@ -100,7 +100,7 @@ const BlogGridWithSidebar = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
+                        className="flex rounded-[3px] px-3.5 py-1.5 duration-200 hover:bg-blue hover:text-white"
                       >
                         3
                       </a>
@@ -109,7 +109,7 @@ const BlogGridWithSidebar = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
+                        className="flex rounded-[3px] px-3.5 py-1.5 duration-200 hover:bg-blue hover:text-white"
                       >
                         4
                       </a>
@@ -118,7 +118,7 @@ const BlogGridWithSidebar = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
+                        className="flex rounded-[3px] px-3.5 py-1.5 duration-200 hover:bg-blue hover:text-white"
                       >
                         5
                       </a>
@@ -127,7 +127,7 @@ const BlogGridWithSidebar = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
+                        className="flex rounded-[3px] px-3.5 py-1.5 duration-200 hover:bg-blue hover:text-white"
                       >
                         ...
                       </a>
@@ -136,7 +136,7 @@ const BlogGridWithSidebar = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
+                        className="flex rounded-[3px] px-3.5 py-1.5 duration-200 hover:bg-blue hover:text-white"
                       >
                         10
                       </a>
@@ -147,7 +147,7 @@ const BlogGridWithSidebar = () => {
                         id="paginationLeft"
                         aria-label="button for pagination left"
                         type="button"
-                        className="flex items-center justify-center w-8 h-9 ease-out duration-200 rounded-[3px] hover:text-white hover:bg-blue disabled:text-gray-4"
+                        className="flex h-9 w-8 items-center justify-center rounded-[3px] duration-200 ease-out hover:bg-blue hover:text-white disabled:text-gray-4"
                       >
                         <svg
                           className="fill-current"
@@ -171,7 +171,7 @@ const BlogGridWithSidebar = () => {
             </div>
 
             {/* <!-- blog sidebar --> */}
-            <div className="lg:max-w-[370px] w-full">
+            <div className="w-full lg:max-w-[370px]">
               {/* <!-- search box --> */}
               <SearchForm />
 
@@ -185,64 +185,64 @@ const BlogGridWithSidebar = () => {
               <Categories categories={categories} />
 
               {/* <!-- Tags box --> */}
-              <div className="shadow-1 bg-white rounded-xl mt-7.5">
-                <div className="px-4 sm:px-6 py-4.5 border-b border-gray-3">
-                  <h2 className="font-medium text-lg text-dark">Tags</h2>
+              <div className="mt-7.5 rounded-xl bg-white shadow-1">
+                <div className="border-b border-gray-3 px-4 py-4.5 sm:px-6">
+                  <h2 className="text-lg font-medium text-dark">Tags</h2>
                 </div>
 
                 <div className="p-4 sm:p-6">
                   <div className="flex flex-wrap gap-3.5">
                     <a
-                      className="inline-flex hover:text-white border border-gray-3 py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
+                      className="inline-flex rounded-md border border-gray-3 px-4 py-2 duration-200 ease-out hover:border-blue hover:bg-blue hover:text-white"
                       href="#"
                     >
                       Desktop
                     </a>
 
                     <a
-                      className="inline-flex hover:text-white border border-gray-3 py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
+                      className="inline-flex rounded-md border border-gray-3 px-4 py-2 duration-200 ease-out hover:border-blue hover:bg-blue hover:text-white"
                       href="#"
                     >
                       Macbook
                     </a>
 
                     <a
-                      className="inline-flex hover:text-white border border-gray-3 py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
+                      className="inline-flex rounded-md border border-gray-3 px-4 py-2 duration-200 ease-out hover:border-blue hover:bg-blue hover:text-white"
                       href="#"
                     >
                       PC
                     </a>
 
                     <a
-                      className="inline-flex hover:text-white border border-gray-3 py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
+                      className="inline-flex rounded-md border border-gray-3 px-4 py-2 duration-200 ease-out hover:border-blue hover:bg-blue hover:text-white"
                       href="#"
                     >
                       Watch
                     </a>
 
                     <a
-                      className="inline-flex hover:text-white border border-gray-3 py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
+                      className="inline-flex rounded-md border border-gray-3 px-4 py-2 duration-200 ease-out hover:border-blue hover:bg-blue hover:text-white"
                       href="#"
                     >
                       USB Cable
                     </a>
 
                     <a
-                      className="inline-flex hover:text-white border border-gray-3 py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
+                      className="inline-flex rounded-md border border-gray-3 px-4 py-2 duration-200 ease-out hover:border-blue hover:bg-blue hover:text-white"
                       href="#"
                     >
                       Mouse
                     </a>
 
                     <a
-                      className="inline-flex hover:text-white border border-gray-3 py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
+                      className="inline-flex rounded-md border border-gray-3 px-4 py-2 duration-200 ease-out hover:border-blue hover:bg-blue hover:text-white"
                       href="#"
                     >
                       Windows PC
                     </a>
 
                     <a
-                      className="inline-flex hover:text-white border border-gray-3 py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
+                      className="inline-flex rounded-md border border-gray-3 px-4 py-2 duration-200 ease-out hover:border-blue hover:bg-blue hover:text-white"
                       href="#"
                     >
                       Monitor

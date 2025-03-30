@@ -1,22 +1,20 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
     <footer className="overflow-hidden">
-      <div className="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
+      <div className="mx-auto max-w-[1170px] px-4 sm:px-8 xl:px-0">
         {/* <!-- footer menu start --> */}
-        <div className="flex flex-wrap xl:flex-nowrap gap-10 xl:gap-19 xl:justify-between pt-17.5 xl:pt-22.5 pb-10 xl:pb-15">
-          <div className="max-w-[330px] w-full">
-            <h2 className="mb-7.5 text-custom-1 font-medium text-dark">
-              Help & Support
-            </h2>
+        <div className="flex flex-wrap gap-10 pb-10 pt-17.5 xl:flex-nowrap xl:justify-between xl:gap-19 xl:pb-15 xl:pt-22.5">
+          <div className="w-full max-w-[330px]">
+            <h2 className="mb-7.5 text-custom-1 font-medium text-dark">Help & Support</h2>
 
             <ul className="flex flex-col gap-3">
               <li className="flex gap-4.5">
-                <span className="flex-shrink-0">
+                <span className="shrink-0">
                   <svg
                     width="24"
                     height="24"
@@ -87,11 +85,11 @@ const Footer = () => {
             </ul>
 
             {/* <!-- Social Links start --> */}
-            <div className="flex items-center gap-4 mt-7.5">
+            <div className="mt-7.5 flex items-center gap-4">
               <a
                 href="#"
                 aria-label="Facebook Social Link"
-                className="flex ease-out duration-200 hover:text-blue"
+                className="flex duration-200 ease-out hover:text-blue"
               >
                 <svg
                   className="fill-current"
@@ -116,7 +114,7 @@ const Footer = () => {
               <a
                 href="#"
                 aria-label="Twitter Social Link"
-                className="flex ease-out duration-200 hover:text-blue"
+                className="flex duration-200 ease-out hover:text-blue"
               >
                 <svg
                   className="fill-current"
@@ -136,7 +134,7 @@ const Footer = () => {
               <a
                 href="#"
                 aria-label="Instagram Social Link"
-                className="flex ease-out duration-200 hover:text-blue"
+                className="flex duration-200 ease-out hover:text-blue"
               >
                 <svg
                   className="fill-current"
@@ -171,7 +169,7 @@ const Footer = () => {
               <a
                 href="#"
                 aria-label="Linkedin Social Link"
-                className="flex ease-out duration-200 hover:text-blue"
+                className="flex duration-200 ease-out hover:text-blue"
               >
                 <svg
                   className="fill-current"
@@ -197,33 +195,31 @@ const Footer = () => {
           </div>
 
           <div className="w-full sm:w-auto">
-            <h2 className="mb-7.5 text-custom-1 font-medium text-dark">
-              Account
-            </h2>
+            <h2 className="mb-7.5 text-custom-1 font-medium text-dark">Account</h2>
 
             <ul className="flex flex-col gap-3.5">
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
+                <a className="duration-200 ease-out hover:text-blue" href="#">
                   My Account
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
+                <a className="duration-200 ease-out hover:text-blue" href="#">
                   Login / Register
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
+                <a className="duration-200 ease-out hover:text-blue" href="#">
                   Cart
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
+                <a className="duration-200 ease-out hover:text-blue" href="#">
                   Wishlist
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
+                <a className="duration-200 ease-out hover:text-blue" href="#">
                   Shop
                 </a>
               </li>
@@ -231,33 +227,31 @@ const Footer = () => {
           </div>
 
           <div className="w-full sm:w-auto">
-            <h2 className="mb-7.5 text-custom-1 font-medium text-dark">
-              Quick Link
-            </h2>
+            <h2 className="mb-7.5 text-custom-1 font-medium text-dark">Quick Link</h2>
 
             <ul className="flex flex-col gap-3">
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
+                <a className="duration-200 ease-out hover:text-blue" href="#">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
+                <a className="duration-200 ease-out hover:text-blue" href="#">
                   Refund Policy
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
+                <a className="duration-200 ease-out hover:text-blue" href="#">
                   Terms of Use
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
+                <a className="duration-200 ease-out hover:text-blue" href="#">
                   FAQ’s
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
+                <a className="duration-200 ease-out hover:text-blue" href="#">
                   Contact
                 </a>
               </li>
@@ -269,14 +263,12 @@ const Footer = () => {
               Download App
             </h2>
 
-            <p className="lg:text-right text-custom-sm mb-4">
-              Save $3 With App & New User only
-            </p>
+            <p className="mb-4 text-custom-sm lg:text-right">Save $3 With App & New User only</p>
 
-            <ul className="flex flex-col lg:items-end gap-3">
+            <ul className="flex flex-col gap-3 lg:items-end">
               <li>
                 <a
-                  className="inline-flex items-center gap-3 py-[9px] pl-4 pr-7.5 text-white rounded-md bg-dark ease-out duration-200 hover:bg-opacity-95"
+                  className="inline-flex items-center gap-3 rounded-md bg-dark py-[9px] pl-4 pr-7.5 text-white duration-200 ease-out hover:bg-opacity-95"
                   href="#"
                 >
                   <svg
@@ -294,9 +286,7 @@ const Footer = () => {
                   </svg>
 
                   <div>
-                    <span className="block text-custom-xs">
-                      Download on the
-                    </span>
+                    <span className="block text-custom-xs">Download on the</span>
                     <p className="font-medium">App Store</p>
                   </div>
                 </a>
@@ -304,7 +294,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  className="inline-flex items-center gap-3 py-[9px] pl-4 pr-8.5 text-white rounded-md bg-blue ease-out duration-200 hover:bg-opacity-95"
+                  className="inline-flex items-center gap-3 rounded-md bg-blue py-[9px] pl-4 pr-8.5 text-white duration-200 ease-out hover:bg-opacity-95"
                   href="#"
                 >
                   <svg
@@ -334,10 +324,10 @@ const Footer = () => {
       </div>
 
       {/* <!-- footer bottom start --> */}
-      <div className="py-5 xl:py-7.5 bg-gray-1">
-        <div className="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-          <div className="flex gap-5 flex-wrap items-center justify-between">
-            <p className="text-dark font-medium">
+      <div className="bg-gray-1 py-5 xl:py-7.5">
+        <div className="mx-auto max-w-[1170px] px-4 sm:px-8 xl:px-0">
+          <div className="flex flex-wrap items-center justify-between gap-5">
+            <p className="font-medium text-dark">
               &copy; {year}. All rights reserved by PimjoLabs.
             </p>
 
@@ -354,12 +344,7 @@ const Footer = () => {
                   />
                 </a>
                 <a href="#" aria-label="payment system with paypal">
-                  <Image
-                    src="/images/payment/payment-02.svg"
-                    alt="paypal"
-                    width={18}
-                    height={21}
-                  />
+                  <Image src="/images/payment/payment-02.svg" alt="paypal" width={18} height={21} />
                 </a>
                 <a href="#" aria-label="payment system with master card">
                   <Image

@@ -1,16 +1,16 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
-import Link from "next/link";
-import React from "react";
+import Breadcrumb from '@/components/Common/Breadcrumb';
+import Link from 'next/link';
+import React from 'react';
 
 const Signin = () => {
   return (
     <>
-      <Breadcrumb title={"Signin"} pages={["Signin"]} />
-      <section className="overflow-hidden py-20 bg-gray-2">
-        <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-          <div className="max-w-[570px] w-full mx-auto rounded-xl bg-white shadow-1 p-4 sm:p-7.5 xl:p-11">
-            <div className="text-center mb-11">
-              <h2 className="font-semibold text-xl sm:text-2xl xl:text-heading-5 text-dark mb-1.5">
+      <Breadcrumb title={'Signin'} pages={['Signin']} />
+      <section className="overflow-hidden bg-gray-2 py-20">
+        <div className="mx-auto w-full max-w-[1170px] px-4 sm:px-8 xl:px-0">
+          <div className="mx-auto w-full max-w-[570px] rounded-xl bg-white p-4 shadow-1 sm:p-7.5 xl:p-11">
+            <div className="mb-11 text-center">
+              <h2 className="mb-1.5 text-xl font-semibold text-dark sm:text-2xl xl:text-heading-5">
                 Sign In to Your Account
               </h2>
               <p>Enter your detail below</p>
@@ -19,7 +19,7 @@ const Signin = () => {
             <div>
               <form>
                 <div className="mb-5">
-                  <label htmlFor="email" className="block mb-2.5">
+                  <label htmlFor="email" className="mb-2.5 block">
                     Email
                   </label>
 
@@ -28,12 +28,12 @@ const Signin = () => {
                     name="email"
                     id="email"
                     placeholder="Enter your email"
-                    className="rounded-lg border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-3 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                    className="w-full rounded-lg border border-gray-3 bg-gray-1 px-5 py-3 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                   />
                 </div>
 
                 <div className="mb-5">
-                  <label htmlFor="password" className="block mb-2.5">
+                  <label htmlFor="password" className="mb-2.5 block">
                     Password
                   </label>
 
@@ -43,31 +43,31 @@ const Signin = () => {
                     id="password"
                     placeholder="Enter your password"
                     autoComplete="on"
-                    className="rounded-lg border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-3 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                    className="w-full rounded-lg border border-gray-3 bg-gray-1 px-5 py-3 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full flex justify-center font-medium text-white bg-dark py-3 px-6 rounded-lg ease-out duration-200 hover:bg-blue mt-7.5"
+                  className="mt-7.5 flex w-full justify-center rounded-lg bg-dark px-6 py-3 font-medium text-white duration-200 ease-out hover:bg-blue"
                 >
                   Sign in to account
                 </button>
 
                 <a
                   href="#"
-                  className="block text-center text-dark-4 mt-4.5 ease-out duration-200 hover:text-dark"
+                  className="mt-4.5 block text-center text-dark-4 duration-200 ease-out hover:text-dark"
                 >
                   Forget your password?
                 </a>
 
-                <span className="relative z-1 block font-medium text-center mt-4.5">
-                  <span className="block absolute -z-1 left-0 top-1/2 h-px w-full bg-gray-3"></span>
-                  <span className="inline-block px-3 bg-white">Or</span>
+                <span className="relative z-1 mt-4.5 block text-center font-medium">
+                  <span className="absolute left-0 top-1/2 -z-1 block h-px w-full bg-gray-3"></span>
+                  <span className="inline-block bg-white px-3">Or</span>
                 </span>
 
-                <div className="flex flex-col gap-4.5 mt-4.5">
-                  <button className="flex justify-center items-center gap-3.5 rounded-lg border border-gray-3 bg-gray-1 p-3 ease-out duration-200 hover:bg-gray-2">
+                <div className="mt-4.5 flex flex-col gap-4.5">
+                  <button className="flex items-center justify-center gap-3.5 rounded-lg border border-gray-3 bg-gray-1 p-3 duration-200 ease-out hover:bg-gray-2">
                     <svg
                       width="20"
                       height="20"
@@ -114,7 +114,7 @@ const Signin = () => {
                     Sign In with Google
                   </button>
 
-                  <button className="flex justify-center items-center gap-3.5 rounded-lg border border-gray-3 bg-gray-1 p-3 ease-out duration-200 hover:bg-gray-2">
+                  <button className="flex items-center justify-center gap-3.5 rounded-lg border border-gray-3 bg-gray-1 p-3 duration-200 ease-out hover:bg-gray-2">
                     <svg
                       width="22"
                       height="22"
@@ -131,11 +131,11 @@ const Signin = () => {
                   </button>
                 </div>
 
-                <p className="text-center mt-6">
+                <p className="mt-6 text-center">
                   Don&apos;t have an account?
                   <Link
                     href="/signup"
-                    className="text-dark ease-out duration-200 hover:text-blue pl-2"
+                    className="pl-2 text-dark duration-200 ease-out hover:text-blue"
                   >
                     Sign Up Now!
                   </Link>

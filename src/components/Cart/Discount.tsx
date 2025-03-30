@@ -1,30 +1,30 @@
-import React from "react";
+import React from 'react';
 
 const Discount = () => {
   return (
-    <div className="lg:max-w-[670px] w-full">
+    <div className="w-full lg:max-w-[670px]">
       <form>
         {/* <!-- coupon box --> */}
-        <div className="bg-white shadow-1 rounded-[10px]">
-          <div className="border-b border-gray-3 py-5 px-4 sm:px-5.5">
+        <div className="rounded-[10px] bg-white shadow-1">
+          <div className="border-b border-gray-3 px-4 py-5 sm:px-5.5">
             <h3 className="">Have any discount code?</h3>
           </div>
 
-          <div className="py-8 px-4 sm:px-8.5">
+          <div className="px-4 py-8 sm:px-8.5">
             <div className="flex flex-wrap gap-4 xl:gap-5.5">
-              <div className="max-w-[426px] w-full">
+              <div className="w-full max-w-[426px]">
                 <input
                   type="text"
                   name="coupon"
                   id="coupon"
                   placeholder="Enter coupon code"
-                  className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                  className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                 />
               </div>
 
               <button
                 type="submit"
-                className="inline-flex font-medium text-white bg-blue py-3 px-8 rounded-md ease-out duration-200 hover:bg-blue-dark"
+                className="inline-flex rounded-md bg-blue px-8 py-3 font-medium text-white duration-200 ease-out hover:bg-blue-dark"
               >
                 Apply Code
               </button>

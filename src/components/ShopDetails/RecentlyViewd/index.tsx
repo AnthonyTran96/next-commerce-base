@@ -1,17 +1,15 @@
-"use client";
-import React from "react";
-import shopData from "@/components/Shop/shopData";
-import ProductItem from "@/components/Common/ProductItem";
-import Image from "next/image";
-import Link from "next/link";
+'use client';
+import ProductItem from '@/components/Common/ProductItem';
+import shopData from '@/components/Shop/shopData';
+import Image from 'next/image';
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { useCallback, useRef } from "react";
-import "swiper/css/navigation";
-import "swiper/css";
+import { useCallback, useRef } from 'react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 
 const RecentlyViewdItems = () => {
-  const sliderRef = useRef(null);
+  const sliderRef = useRef<SwiperRef>(null);
 
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
@@ -25,21 +23,16 @@ const RecentlyViewdItems = () => {
 
   return (
     <section className="overflow-hidden pt-17.5">
-      <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0 pb-15 border-b border-gray-3">
+      <div className="mx-auto w-full max-w-[1170px] border-b border-gray-3 px-4 pb-15 sm:px-8 xl:px-0">
         <div className="swiper categories-carousel common-carousel">
           {/* <!-- section title --> */}
           <div className="mb-10 flex items-center justify-between">
             <div>
-              <span className="flex items-center gap-2.5 font-medium text-dark mb-1.5">
-                <Image
-                  src="/images/icons/icon-05.svg"
-                  width={17}
-                  height={17}
-                  alt="icon"
-                />
+              <span className="mb-1.5 flex items-center gap-2.5 font-medium text-dark">
+                <Image src="/images/icons/icon-05.svg" width={17} height={17} alt="icon" />
                 Categories
               </span>
-              <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
+              <h2 className="text-xl font-semibold text-dark xl:text-heading-5">
                 Browse by Category
               </h2>
             </div>
@@ -83,12 +76,7 @@ const RecentlyViewdItems = () => {
             </div>
           </div>
 
-          <Swiper
-            ref={sliderRef}
-            slidesPerView={4}
-            spaceBetween={20}
-            className="justify-between"
-          >
+          <Swiper ref={sliderRef} slidesPerView={4} spaceBetween={20} className="justify-between">
             {shopData.map((item, key) => (
               <SwiperSlide key={key}>
                 <ProductItem item={item} />

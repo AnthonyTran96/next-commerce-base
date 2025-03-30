@@ -1,15 +1,15 @@
-import React from "react";
-import Breadcrumb from "../Common/Breadcrumb";
-import blogData from "./blogData";
-import BlogItem from "../Blog/BlogItem";
+import React from 'react';
+import Breadcrumb from '../Common/Breadcrumb';
+import blogData from './blogData';
+import BlogItem from '../Blog/BlogItem';
 
 const BlogGrid = () => {
   return (
     <>
-      <Breadcrumb title={"Blog Grid"} pages={["blog grid"]} />{" "}
-      <section className="overflow-hidden py-20 bg-gray-2">
-        <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-7.5">
+      <Breadcrumb title={'Blog Grid'} pages={['blog grid']} />{' '}
+      <section className="overflow-hidden bg-gray-2 py-20">
+        <div className="mx-auto w-full max-w-[1170px] px-4 sm:px-8 xl:px-0">
+          <div className="grid grid-cols-1 gap-x-7.5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
             {/* <!-- blog item --> */}
             {blogData.map((blog, key) => (
               <BlogItem blog={blog} key={key} />
@@ -17,8 +17,8 @@ const BlogGrid = () => {
           </div>
 
           {/* <!-- Blog Pagination Start --> */}
-          <div className="flex justify-center mt-15">
-            <div className="bg-white shadow-1 rounded-md p-2">
+          <div className="mt-15 flex justify-center">
+            <div className="rounded-md bg-white p-2 shadow-1">
               <ul className="flex items-center">
                 <li>
                   <button
@@ -26,7 +26,7 @@ const BlogGrid = () => {
                     aria-label="button for pagination left"
                     type="button"
                     disabled
-                    className="flex items-center justify-center w-8 h-9 ease-out duration-200 rounded-[3px disabled:text-gray-4"
+                    className="rounded-[3px flex h-9 w-8 items-center justify-center duration-200 ease-out disabled:text-gray-4"
                   >
                     <svg
                       className="fill-current"
@@ -47,7 +47,7 @@ const BlogGrid = () => {
                 <li>
                   <a
                     href="#"
-                    className="flex py-1.5 px-3.5 duration-200 rounded-[3px] bg-blue text-white hover:text-white hover:bg-blue"
+                    className="flex rounded-[3px] bg-blue px-3.5 py-1.5 text-white duration-200 hover:bg-blue hover:text-white"
                   >
                     1
                   </a>
@@ -56,7 +56,7 @@ const BlogGrid = () => {
                 <li>
                   <a
                     href="#"
-                    className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
+                    className="flex rounded-[3px] px-3.5 py-1.5 duration-200 hover:bg-blue hover:text-white"
                   >
                     2
                   </a>
@@ -65,7 +65,7 @@ const BlogGrid = () => {
                 <li>
                   <a
                     href="#"
-                    className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
+                    className="flex rounded-[3px] px-3.5 py-1.5 duration-200 hover:bg-blue hover:text-white"
                   >
                     3
                   </a>
@@ -74,7 +74,7 @@ const BlogGrid = () => {
                 <li>
                   <a
                     href="#"
-                    className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
+                    className="flex rounded-[3px] px-3.5 py-1.5 duration-200 hover:bg-blue hover:text-white"
                   >
                     4
                   </a>
@@ -83,7 +83,7 @@ const BlogGrid = () => {
                 <li>
                   <a
                     href="#"
-                    className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
+                    className="flex rounded-[3px] px-3.5 py-1.5 duration-200 hover:bg-blue hover:text-white"
                   >
                     5
                   </a>
@@ -92,7 +92,7 @@ const BlogGrid = () => {
                 <li>
                   <a
                     href="#"
-                    className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
+                    className="flex rounded-[3px] px-3.5 py-1.5 duration-200 hover:bg-blue hover:text-white"
                   >
                     ...
                   </a>
@@ -101,7 +101,7 @@ const BlogGrid = () => {
                 <li>
                   <a
                     href="#"
-                    className="flex py-1.5 px-3.5 duration-200 rounded-[3px] hover:text-white hover:bg-blue"
+                    className="flex rounded-[3px] px-3.5 py-1.5 duration-200 hover:bg-blue hover:text-white"
                   >
                     10
                   </a>
@@ -112,7 +112,7 @@ const BlogGrid = () => {
                     id="paginationLeft"
                     aria-label="button for pagination left"
                     type="button"
-                    className="flex items-center justify-center w-8 h-9 ease-out duration-200 rounded-[3px] hover:text-white hover:bg-blue disabled:text-gray-4"
+                    className="flex h-9 w-8 items-center justify-center rounded-[3px] duration-200 ease-out hover:bg-blue hover:text-white disabled:text-gray-4"
                   >
                     <svg
                       className="fill-current"
@@ -134,7 +134,7 @@ const BlogGrid = () => {
           </div>
           {/* <!-- Blog Pagination End --> */}
         </div>
-      </section> 
+      </section>
     </>
   );
 };

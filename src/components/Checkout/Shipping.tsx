@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Shipping = () => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <div className="bg-white shadow-1 rounded-[10px] mt-7.5">
+    <div className="mt-7.5 rounded-[10px] bg-white shadow-1">
       <div
         onClick={() => setDropdown(!dropdown)}
-        className="cursor-pointer flex items-center gap-2.5 font-medium text-lg text-dark py-5 px-5.5"
+        className="flex cursor-pointer items-center gap-2.5 px-5.5 py-5 text-lg font-medium text-dark"
       >
         Ship to a different address?
         <svg
-          className={`fill-current ease-out duration-200 ${
-            dropdown && "rotate-180"
-          }`}
+          className={`fill-current duration-200 ease-out ${dropdown && 'rotate-180'}`}
           width="22"
           height="22"
           viewBox="0 0 22 22"
@@ -30,15 +28,15 @@ const Shipping = () => {
       </div>
 
       {/* <!-- dropdown menu --> */}
-      <div className={`p-4 sm:p-8.5 ${dropdown ? "block" : "hidden"}`}>
+      <div className={`p-4 sm:p-8.5 ${dropdown ? 'block' : 'hidden'}`}>
         <div className="mb-5">
-          <label htmlFor="countryName" className="block mb-2.5">
+          <label htmlFor="countryName" className="mb-2.5 block">
             Country/ Region
             <span className="text-red">*</span>
           </label>
 
           <div className="relative">
-            <select className="w-full bg-gray-1 rounded-md border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-none focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20">
+            <select className="w-full appearance-none rounded-md border border-gray-3 bg-gray-1 py-3 pl-5 pr-9 text-dark-4 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20">
               <option value="0">Australia</option>
               <option value="1">America</option>
               <option value="2">England</option>
@@ -65,7 +63,7 @@ const Shipping = () => {
         </div>
 
         <div className="mb-5">
-          <label htmlFor="address" className="block mb-2.5">
+          <label htmlFor="address" className="mb-2.5 block">
             Street Address
             <span className="text-red">*</span>
           </label>
@@ -74,7 +72,7 @@ const Shipping = () => {
             type="text"
             name="address"
             placeholder="House number and street name"
-            className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+            className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
           />
 
           <div className="mt-5">
@@ -82,56 +80,56 @@ const Shipping = () => {
               type="text"
               name="address"
               placeholder="Apartment, suite, unit, etc. (optional)"
-              className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+              className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
             />
           </div>
         </div>
 
         <div className="mb-5">
-          <label htmlFor="town" className="block mb-2.5">
+          <label htmlFor="town" className="mb-2.5 block">
             Town/ City <span className="text-red">*</span>
           </label>
 
           <input
             type="text"
             name="town"
-            className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+            className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
           />
         </div>
 
         <div className="mb-5">
-          <label htmlFor="country" className="block mb-2.5">
+          <label htmlFor="country" className="mb-2.5 block">
             Country
           </label>
 
           <input
             type="text"
             name="country"
-            className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+            className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
           />
         </div>
 
         <div className="mb-5">
-          <label htmlFor="phone" className="block mb-2.5">
+          <label htmlFor="phone" className="mb-2.5 block">
             Phone <span className="text-red">*</span>
           </label>
 
           <input
             type="text"
             name="phone"
-            className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+            className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block mb-2.5">
+          <label htmlFor="email" className="mb-2.5 block">
             Email Address <span className="text-red">*</span>
           </label>
 
           <input
             type="email"
             name="email"
-            className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+            className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
           />
         </div>
       </div>

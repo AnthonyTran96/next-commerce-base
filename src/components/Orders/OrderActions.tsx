@@ -1,12 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const OrderActions = ({ toggleEdit, toggleDetails }: any) => {
   return (
     <>
-      <button
-        onClick={toggleDetails}
-        className="hover:bg-gray-2 rounded-sm p-2"
-      >
+      <button onClick={toggleDetails} className="rounded-sm p-2 hover:bg-gray-2">
         <svg
           width="18"
           height="16"
@@ -28,7 +25,7 @@ const OrderActions = ({ toggleEdit, toggleDetails }: any) => {
           />
         </svg>
       </button>
-      <button onClick={toggleEdit} className="hover:bg-gray-2 rounded-sm p-2">
+      <button onClick={toggleEdit} className="rounded-sm p-2 hover:bg-gray-2">
         <svg
           width="16"
           height="18"

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import toast from "react-hot-toast";
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const EditOrder = ({ order, toggleModal }: any) => {
   const [currentStatus, setCurrentStatus] = useState(order?.status);
@@ -11,7 +11,7 @@ const EditOrder = ({ order, toggleModal }: any) => {
     e.preventDefault();
 
     if (!currentStatus) {
-      toast.error("Please select a status");
+      toast.error('Please select a status');
       return;
     }
 
@@ -23,7 +23,7 @@ const EditOrder = ({ order, toggleModal }: any) => {
       <p className="pb-2 font-medium text-dark">Order Status</p>
       <div className="w-full">
         <select
-          className="w-full rounded-[10px] border border-gray-3 bg-gray-1 text-dark py-3.5 px-5 text-custom-sm"
+          className="w-full rounded-[10px] border border-gray-3 bg-gray-1 px-5 py-3.5 text-custom-sm text-dark"
           name="status"
           id="status"
           required
@@ -36,7 +36,7 @@ const EditOrder = ({ order, toggleModal }: any) => {
         </select>
 
         <button
-          className="mt-5 w-full rounded-[10px] border border-blue-1 bg-blue-1 text-white py-3.5 px-5 text-custom-sm bg-blue"
+          className="border-blue-1 bg-blue-1 mt-5 w-full rounded-[10px] border bg-blue px-5 py-3.5 text-custom-sm text-white"
           onClick={handleSubmit}
         >
           Save Changes

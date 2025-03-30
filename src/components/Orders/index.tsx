@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
-import SingleOrder from "./SingleOrder";
-import ordersData from "./ordersData";
+import { useEffect, useState } from 'react';
+import SingleOrder from './SingleOrder';
+import ordersData from './ordersData';
 
 const Orders = () => {
-  const [orders, setOrders] = useState<any>([]);
+  // const [orders, setOrders] = useState<any>([]);
+  const [setOrders] = useState<any>([]);
 
   useEffect(() => {
     fetch(`/api/order`)
@@ -22,7 +23,7 @@ const Orders = () => {
         <div className="min-w-[770px]">
           {/* <!-- order item --> */}
           {ordersData.length > 0 && (
-            <div className="items-center justify-between py-4.5 px-7.5 hidden md:flex ">
+            <div className="hidden items-center justify-between px-7.5 py-4.5 md:flex ">
               <div className="min-w-[111px]">
                 <p className="text-custom-sm text-dark">Order</p>
               </div>
@@ -52,9 +53,7 @@ const Orders = () => {
               <SingleOrder key={key} orderItem={orderItem} smallView={false} />
             ))
           ) : (
-            <p className="py-9.5 px-4 sm:px-7.5 xl:px-10">
-              You don&apos;t have any orders!
-            </p>
+            <p className="px-4 py-9.5 sm:px-7.5 xl:px-10">You don&apos;t have any orders!</p>
           )}
         </div>
 

@@ -1,15 +1,13 @@
-import React from "react";
-import Breadcrumb from "../Common/Breadcrumb";
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Breadcrumb from '../Common/Breadcrumb';
 
 const BlogDetails = () => {
   return (
     <>
-      <Breadcrumb title={"Blog Details"} pages={["blog details"]} />
-      <section className="overflow-hidden py-20 bg-gray-2">
-        <div className="max-w-[750px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-          <div className="rounded-[10px] overflow-hidden mb-7.5">
+      <Breadcrumb title={'Blog Details'} pages={['blog details']} />
+      <section className="overflow-hidden bg-gray-2 py-20">
+        <div className="mx-auto w-full max-w-[750px] px-4 sm:px-8 xl:px-0">
+          <div className="mb-7.5 overflow-hidden rounded-[10px]">
             <Image
               className="rounded-[10px]"
               src="/images/blog/blog-details-01.jpg"
@@ -20,123 +18,107 @@ const BlogDetails = () => {
           </div>
 
           <div>
-            <span className="flex items-center gap-3 mb-4">
-              <a href="#" className="ease-out duration-200 hover:text-blue">
+            <span className="mb-4 flex items-center gap-3">
+              <a href="#" className="duration-200 ease-out hover:text-blue">
                 Mar 27, 2022
               </a>
 
               {/* <!-- divider --> */}
-              <span className="block w-px h-4 bg-gray-4"></span>
+              <span className="block h-4 w-px bg-gray-4"></span>
 
-              <a href="#" className="ease-out duration-200 hover:text-blue">
+              <a href="#" className="duration-200 ease-out hover:text-blue">
                 300k Views
               </a>
             </span>
 
-            <h2 className="font-medium text-dark text-xl lg:text-2xl xl:text-custom-4xl mb-4">
+            <h2 className="mb-4 text-xl font-medium text-dark lg:text-2xl xl:text-custom-4xl">
               What information is needed for shipping?
             </h2>
 
             <p className="mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              sit amet eros ac ipsum egestas dapibus. Vivamus gravida, ex non
-              placerat tincidunt, lorem felis facilisis tellus, vitae bibendum
-              purus felis eget tellus. In non rutrum ipsum. Morbi ut dui ante.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet eros ac
+              ipsum egestas dapibus. Vivamus gravida, ex non placerat tincidunt, lorem felis
+              facilisis tellus, vitae bibendum purus felis eget tellus. In non rutrum ipsum. Morbi
+              ut dui ante.
             </p>
 
             <p className="mb-6">
-              Nunc faucibus libero sem, quis placerat nisl pellentesque eget.
-              Morbi porta velit ut leo sollicitudin, a faucibus purus faucibus.
-              Maecenas mollis dui nec metus euismod, sed aliquam risus luctus.
+              Nunc faucibus libero sem, quis placerat nisl pellentesque eget. Morbi porta velit ut
+              leo sollicitudin, a faucibus purus faucibus. Maecenas mollis dui nec metus euismod,
+              sed aliquam risus luctus.
             </p>
 
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              enim lobortis scelerisque fermentum. Neque sodales ut etiam sit
-              amet. Ligula ullamcorper malesuada proin libero nunc consequat
-              interdum varius. Quam pellentesque nec nam aliquam sem et tortor
-              consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.
+              Neque sodales ut etiam sit amet. Ligula ullamcorper malesuada proin libero nunc
+              consequat interdum varius. Quam pellentesque nec nam aliquam sem et tortor consequat.
             </p>
 
             <div className="mt-7.5">
-              <h3 className="font-medium text-dark text-lg xl:text-[26px] xl:leading-[34px] mb-6">
+              <h3 className="mb-6 text-lg font-medium text-dark xl:text-[26px] xl:leading-[34px]">
                 Digital marketplace for Ui/Ux designers.
               </h3>
 
               <ul className="list-disc pl-6">
                 <li>Consectetur adipiscing elit in voluptate velit.</li>
                 <li>Mattis vulputate cupidatat.</li>
-                <li>
-                  Vulputate enim nulla aliquet porttitor odio pellentesque
-                </li>
+                <li>Vulputate enim nulla aliquet porttitor odio pellentesque</li>
                 <li>Ligula ullamcorper malesuada proin</li>
               </ul>
             </div>
 
-            <div className="rounded-xl bg-white pt-7.5 pb-6 px-4 sm:px-7.5 my-7.5">
-              <p className="italic text-dark text-center">
-                ‘‘Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod incididunt utionals labore et dolore magna aliqua
-                quis fermentum,,
+            <div className="my-7.5 rounded-xl bg-white px-4 pb-6 pt-7.5 sm:px-7.5">
+              <p className="text-center italic text-dark">
+                ‘‘Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt
+                utionals labore et dolore magna aliqua quis fermentum,,
               </p>
 
-              <a
-                href="#"
-                className="flex items-center justify-center gap-3 mt-5.5"
-              >
-                <div className="flex w-12 h-12 rounded-full overflow-hidden">
-                  <Image
-                    src="/images/users/user-04.jpg"
-                    alt="user"
-                    width={48}
-                    height={48}
-                  />
+              <a href="#" className="mt-5.5 flex items-center justify-center gap-3">
+                <div className="flex h-12 w-12 overflow-hidden rounded-full">
+                  <Image src="/images/users/user-04.jpg" alt="user" width={48} height={48} />
                 </div>
 
                 <div>
-                  <h4 className="text-dark text-custom-sm">Jhon Drineo</h4>
+                  <h4 className="text-custom-sm text-dark">Jhon Drineo</h4>
                   <p className="text-custom-xs">Entroprenor</p>
                 </div>
               </a>
             </div>
 
             <p className="mb-6">
-              consectetur adipiscing elit in voluptate velit esse cillum dolore
-              eu fugiat nulla pariatur. Excepteur sint occaecat mattis vulputate
-              cupidatat.
+              consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat mattis vulputate cupidatat.
             </p>
 
             <p className="mb-6">
-              Nunc faucibus libero sem, quis placerat nisl pellentesque eget.
-              Morbi porta velit ut leo sollicitudin, a faucibus purus faucibus.
-              Maecenas mollis dui nec metus euismod, sed aliquam risus luctus.
+              Nunc faucibus libero sem, quis placerat nisl pellentesque eget. Morbi porta velit ut
+              leo sollicitudin, a faucibus purus faucibus. Maecenas mollis dui nec metus euismod,
+              sed aliquam risus luctus.
             </p>
 
             <p className="mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              enim lobortis scelerisque fermentum. Neque sodales ut etiam sit
-              amet. Ligula ullamcorper malesuada proin libero nunc consequat
-              interdum varius. Quam pellentesque nec nam aliquam sem et tortor
-              consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.
+              Neque sodales ut etiam sit amet. Ligula ullamcorper malesuada proin libero nunc
+              consequat interdum varius. Quam pellentesque nec nam aliquam sem et tortor consequat.
             </p>
 
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              sit amet eros ac ipsum egestas dapibus. Vivamus gravida, ex non
-              placerat tincidunt, lorem felis facilisis tellus, vitae bibendum
-              purus felis eget tellus. In non rutrum ipsum. Morbi ut dui ante.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet eros ac
+              ipsum egestas dapibus. Vivamus gravida, ex non placerat tincidunt, lorem felis
+              facilisis tellus, vitae bibendum purus felis eget tellus. In non rutrum ipsum. Morbi
+              ut dui ante.
             </p>
 
-            <div className="flex flex-wrap items-center justify-between gap-10 mt-10">
+            <div className="mt-10 flex flex-wrap items-center justify-between gap-10">
               <div className="flex flex-wrap items-center gap-5">
                 <p>Popular Tags :</p>
 
                 <ul className="flex flex-wrap items-center gap-3.5">
                   <li>
                     <a
-                      className="inline-flex hover:text-white border border-gray-3 bg-white py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
+                      className="inline-flex rounded-md border border-gray-3 bg-white px-4 py-2 duration-200 ease-out hover:border-blue hover:bg-blue hover:text-white"
                       href="#"
                     >
                       Desktop
@@ -145,7 +127,7 @@ const BlogDetails = () => {
 
                   <li>
                     <a
-                      className="inline-flex hover:text-white border border-gray-3 bg-white py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
+                      className="inline-flex rounded-md border border-gray-3 bg-white px-4 py-2 duration-200 ease-out hover:border-blue hover:bg-blue hover:text-white"
                       href="#"
                     >
                       Macbook
@@ -154,7 +136,7 @@ const BlogDetails = () => {
 
                   <li>
                     <a
-                      className="inline-flex hover:text-white border border-gray-3 bg-white py-2 px-4 rounded-md ease-out duration-200 hover:bg-blue hover:border-blue"
+                      className="inline-flex rounded-md border border-gray-3 bg-white px-4 py-2 duration-200 ease-out hover:border-blue hover:bg-blue hover:text-white"
                       href="#"
                     >
                       PC
@@ -167,7 +149,7 @@ const BlogDetails = () => {
               <div className="flex items-center gap-3">
                 <a
                   href="#"
-                  className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-[#BD081C] ease-in duration-200 hover:bg-opacity-95"
+                  className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-[#BD081C] duration-200 ease-in hover:bg-opacity-95"
                 >
                   <svg
                     width="17"
@@ -192,7 +174,7 @@ const BlogDetails = () => {
 
                 <a
                   href="#"
-                  className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-[#0376A8] ease-in duration-200 hover:bg-opacity-95"
+                  className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-[#0376A8] duration-200 ease-in hover:bg-opacity-95"
                 >
                   <svg
                     width="16"
@@ -210,7 +192,7 @@ const BlogDetails = () => {
 
                 <a
                   href="#"
-                  className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-[#00ACEE] ease-in duration-200 hover:bg-opacity-95"
+                  className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-[#00ACEE] duration-200 ease-in hover:bg-opacity-95"
                 >
                   <svg
                     width="18"
@@ -228,7 +210,7 @@ const BlogDetails = () => {
 
                 <a
                   href="#"
-                  className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-[#1877F2] ease-in duration-200 hover:bg-opacity-95"
+                  className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-[#1877F2] duration-200 ease-in hover:bg-opacity-95"
                 >
                   <svg
                     width="9"

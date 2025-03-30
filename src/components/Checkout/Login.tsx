@@ -1,23 +1,21 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Login = () => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <div className="bg-white shadow-1 rounded-[10px]">
+    <div className="rounded-[10px] bg-white shadow-1">
       <div
         onClick={() => setDropdown(!dropdown)}
-        className={`cursor-pointer flex items-center gap-0.5 py-5 px-5.5 ${
-          dropdown && "border-b border-gray-3"
+        className={`flex cursor-pointer items-center gap-0.5 px-5.5 py-5 ${
+          dropdown && 'border-b border-gray-3'
         }`}
       >
         Returning customer?
         <span className="flex items-center gap-2.5 pl-1 font-medium text-dark">
           Click here to login
           <svg
-            className={`${
-              dropdown && "rotate-180"
-            } fill-current ease-out duration-200`}
+            className={`${dropdown && 'rotate-180'} fill-current duration-200 ease-out`}
             width="22"
             height="22"
             viewBox="0 0 22 22"
@@ -35,17 +33,11 @@ const Login = () => {
       </div>
 
       {/* <!-- dropdown menu --> */}
-      <div
-        className={`${
-          dropdown ? "block" : "hidden"
-        } pt-7.5 pb-8.5 px-4 sm:px-8.5`}
-      >
-        <p className="text-custom-sm mb-6">
-          If you didn&apos;t Logged in, Please Log in first.
-        </p>
+      <div className={`${dropdown ? 'block' : 'hidden'} px-4 pb-8.5 pt-7.5 sm:px-8.5`}>
+        <p className="mb-6 text-custom-sm">If you didn&apos;t Logged in, Please Log in first.</p>
 
         <div className="mb-5">
-          <label htmlFor="name" className="block mb-2.5">
+          <label htmlFor="name" className="mb-2.5 block">
             Username or Email
           </label>
 
@@ -53,12 +45,12 @@ const Login = () => {
             type="text"
             name="name"
             id="name"
-            className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+            className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
           />
         </div>
 
         <div className="mb-5">
-          <label htmlFor="password" className="block mb-2.5">
+          <label htmlFor="password" className="mb-2.5 block">
             Password
           </label>
 
@@ -67,13 +59,13 @@ const Login = () => {
             name="password"
             id="password"
             autoComplete="on"
-            className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+            className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
           />
         </div>
 
         <button
           type="submit"
-          className="inline-flex font-medium text-white bg-blue py-3 px-10.5 rounded-md ease-out duration-200 hover:bg-blue-dark"
+          className="inline-flex rounded-md bg-blue px-10.5 py-3 font-medium text-white duration-200 ease-out hover:bg-blue-dark"
         >
           Login
         </button>

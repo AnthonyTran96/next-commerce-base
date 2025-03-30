@@ -1,12 +1,12 @@
-"use client";
-import React, { useState } from "react";
-import Breadcrumb from "../Common/Breadcrumb";
-import Image from "next/image";
-import AddressModal from "./AddressModal";
-import Orders from "../Orders";
+'use client';
+import React, { useState } from 'react';
+import Breadcrumb from '../Common/Breadcrumb';
+import Image from 'next/image';
+import AddressModal from './AddressModal';
+import Orders from '../Orders';
 
 const MyAccount = () => {
-  const [activeTab, setActiveTab] = useState("dashboard");
+  const [activeTab, setActiveTab] = useState('dashboard');
   const [addressModal, setAddressModal] = useState(false);
 
   const openAddressModal = () => {
@@ -19,40 +19,31 @@ const MyAccount = () => {
 
   return (
     <>
-      <Breadcrumb title={"My Account"} pages={["my account"]} />
+      <Breadcrumb title={'My Account'} pages={['my account']} />
 
-      <section className="overflow-hidden py-20 bg-gray-2">
-        <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-          <div className="flex flex-col xl:flex-row gap-7.5">
+      <section className="overflow-hidden bg-gray-2 py-20">
+        <div className="mx-auto w-full max-w-[1170px] px-4 sm:px-8 xl:px-0">
+          <div className="flex flex-col gap-7.5 xl:flex-row">
             {/* <!--== user dashboard menu start ==--> */}
-            <div className="xl:max-w-[370px] w-full bg-white rounded-xl shadow-1">
+            <div className="w-full rounded-xl bg-white shadow-1 xl:max-w-[370px]">
               <div className="flex xl:flex-col">
-                <div className="hidden lg:flex flex-wrap items-center gap-5 py-6 px-4 sm:px-7.5 xl:px-9 border-r xl:border-r-0 xl:border-b border-gray-3">
-                  <div className="max-w-[64px] w-full h-16 rounded-full overflow-hidden">
-                    <Image
-                      src="/images/users/user-04.jpg"
-                      alt="user"
-                      width={64}
-                      height={64}
-                    />
+                <div className="hidden flex-wrap items-center gap-5 border-r border-gray-3 px-4 py-6 sm:px-7.5 lg:flex xl:border-b xl:border-r-0 xl:px-9">
+                  <div className="h-16 w-full max-w-[64px] overflow-hidden rounded-full">
+                    <Image src="/images/users/user-04.jpg" alt="user" width={64} height={64} />
                   </div>
 
                   <div>
-                    <p className="font-medium text-dark mb-0.5">
-                      James Septimus
-                    </p>
+                    <p className="mb-0.5 font-medium text-dark">James Septimus</p>
                     <p className="text-custom-xs">Member Since Sep 2020</p>
                   </div>
                 </div>
 
                 <div className="p-4 sm:p-7.5 xl:p-9">
-                  <div className="flex flex-wrap xl:flex-nowrap xl:flex-col gap-4">
+                  <div className="flex flex-wrap gap-4 xl:flex-col xl:flex-nowrap">
                     <button
-                      onClick={() => setActiveTab("dashboard")}
-                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white ${
-                        activeTab === "dashboard"
-                          ? "text-white bg-blue"
-                          : "text-dark-2 bg-gray-1"
+                      onClick={() => setActiveTab('dashboard')}
+                      className={`flex items-center gap-2.5 rounded-md px-4.5 py-3 duration-200 ease-out hover:bg-blue hover:text-white ${
+                        activeTab === 'dashboard' ? 'bg-blue text-white' : 'bg-gray-1 text-dark-2'
                       }`}
                     >
                       <svg
@@ -91,11 +82,9 @@ const MyAccount = () => {
                       Dashboard
                     </button>
                     <button
-                      onClick={() => setActiveTab("orders")}
-                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white ${
-                        activeTab === "orders"
-                          ? "text-white bg-blue"
-                          : "text-dark-2 bg-gray-1"
+                      onClick={() => setActiveTab('orders')}
+                      className={`flex items-center gap-2.5 rounded-md px-4.5 py-3 duration-200 ease-out hover:bg-blue hover:text-white ${
+                        activeTab === 'orders' ? 'bg-blue text-white' : 'bg-gray-1 text-dark-2'
                       }`}
                     >
                       <svg
@@ -129,11 +118,9 @@ const MyAccount = () => {
                     </button>
 
                     <button
-                      onClick={() => setActiveTab("downloads")}
-                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white ${
-                        activeTab === "downloads"
-                          ? "text-white bg-blue"
-                          : "text-dark-2 bg-gray-1"
+                      onClick={() => setActiveTab('downloads')}
+                      className={`flex items-center gap-2.5 rounded-md px-4.5 py-3 duration-200 ease-out hover:bg-blue hover:text-white ${
+                        activeTab === 'downloads' ? 'bg-blue text-white' : 'bg-gray-1 text-dark-2'
                       }`}
                     >
                       <svg
@@ -157,11 +144,9 @@ const MyAccount = () => {
                     </button>
 
                     <button
-                      onClick={() => setActiveTab("addresses")}
-                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white ${
-                        activeTab === "addresses"
-                          ? "text-white bg-blue"
-                          : "text-dark-2 bg-gray-1"
+                      onClick={() => setActiveTab('addresses')}
+                      className={`flex items-center gap-2.5 rounded-md px-4.5 py-3 duration-200 ease-out hover:bg-blue hover:text-white ${
+                        activeTab === 'addresses' ? 'bg-blue text-white' : 'bg-gray-1 text-dark-2'
                       }`}
                     >
                       <svg
@@ -187,11 +172,11 @@ const MyAccount = () => {
                     </button>
 
                     <button
-                      onClick={() => setActiveTab("account-details")}
-                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white ${
-                        activeTab === "account-details"
-                          ? "text-white bg-blue"
-                          : "text-dark-2 bg-gray-1"
+                      onClick={() => setActiveTab('account-details')}
+                      className={`flex items-center gap-2.5 rounded-md px-4.5 py-3 duration-200 ease-out hover:bg-blue hover:text-white ${
+                        activeTab === 'account-details'
+                          ? 'bg-blue text-white'
+                          : 'bg-gray-1 text-dark-2'
                       }`}
                     >
                       <svg
@@ -219,11 +204,9 @@ const MyAccount = () => {
                     </button>
 
                     <button
-                      onClick={() => setActiveTab("logout")}
-                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white ${
-                        activeTab === "logout"
-                          ? "text-white bg-blue"
-                          : "text-dark-2 bg-gray-1"
+                      onClick={() => setActiveTab('logout')}
+                      className={`flex items-center gap-2.5 rounded-md px-4.5 py-3 duration-200 ease-out hover:bg-blue hover:text-white ${
+                        activeTab === 'logout' ? 'bg-blue text-white' : 'bg-gray-1 text-dark-2'
                       }`}
                     >
                       <svg
@@ -256,33 +239,29 @@ const MyAccount = () => {
             {/* <!-- dashboard tab content start --> */}
 
             <div
-              className={`xl:max-w-[770px] w-full bg-white rounded-xl shadow-1 py-9.5 px-4 sm:px-7.5 xl:px-10 ${
-                activeTab === "dashboard" ? "block" : "hidden"
+              className={`w-full rounded-xl bg-white px-4 py-9.5 shadow-1 sm:px-7.5 xl:max-w-[770px] xl:px-10 ${
+                activeTab === 'dashboard' ? 'block' : 'hidden'
               }`}
             >
               <p className="text-dark">
                 Hello Annie (not Annie?
-                <a
-                  href="#"
-                  className="text-red ease-out duration-200 hover:underline"
-                >
+                <a href="#" className="text-red duration-200 ease-out hover:underline">
                   Log Out
                 </a>
                 )
               </p>
 
-              <p className="text-custom-sm mt-4">
-                From your account dashboard you can view your recent orders,
-                manage your shipping and billing addresses, and edit your
-                password and account details.
+              <p className="mt-4 text-custom-sm">
+                From your account dashboard you can view your recent orders, manage your shipping
+                and billing addresses, and edit your password and account details.
               </p>
             </div>
             {/* <!-- dashboard tab content end -->
 
           <!-- orders tab content start --> */}
             <div
-              className={`xl:max-w-[770px] w-full bg-white rounded-xl shadow-1 ${
-                activeTab === "orders" ? "block" : "hidden"
+              className={`w-full rounded-xl bg-white shadow-1 xl:max-w-[770px] ${
+                activeTab === 'orders' ? 'block' : 'hidden'
               }`}
             >
               <Orders />
@@ -291,8 +270,8 @@ const MyAccount = () => {
 
           <!-- downloads tab content start --> */}
             <div
-              className={`xl:max-w-[770px] w-full bg-white rounded-xl shadow-1 py-9.5 px-4 sm:px-7.5 xl:px-10 ${
-                activeTab === "downloads" ? "block" : "hidden"
+              className={`w-full rounded-xl bg-white px-4 py-9.5 shadow-1 sm:px-7.5 xl:max-w-[770px] xl:px-10 ${
+                activeTab === 'downloads' ? 'block' : 'hidden'
               }`}
             >
               <p>You don&apos;t have any download</p>
@@ -301,18 +280,16 @@ const MyAccount = () => {
 
           <!-- addresses tab content start --> */}
             <div
-              className={`flex-col sm:flex-row gap-7.5 ${
-                activeTab === "addresses" ? "flex" : "hidden"
+              className={`flex-col gap-7.5 sm:flex-row ${
+                activeTab === 'addresses' ? 'flex' : 'hidden'
               }`}
             >
-              <div className="xl:max-w-[370px] w-full bg-white shadow-1 rounded-xl">
-                <div className="flex items-center justify-between py-5 px-4 sm:pl-7.5 sm:pr-6 border-b border-gray-3">
-                  <p className="font-medium text-xl text-dark">
-                    Shipping Address
-                  </p>
+              <div className="w-full rounded-xl bg-white shadow-1 xl:max-w-[370px]">
+                <div className="flex items-center justify-between border-b border-gray-3 px-4 py-5 sm:pl-7.5 sm:pr-6">
+                  <p className="text-xl font-medium text-dark">Shipping Address</p>
 
                   <button
-                    className="text-dark ease-out duration-200 hover:text-blue"
+                    className="text-dark duration-200 ease-out hover:text-blue"
                     onClick={openAddressModal}
                   >
                     <svg
@@ -410,7 +387,7 @@ const MyAccount = () => {
 
                     <p className="flex gap-2.5 text-custom-sm">
                       <svg
-                        className="fill-current mt-0.5"
+                        className="mt-0.5 fill-current"
                         width="18"
                         height="18"
                         viewBox="0 0 18 18"
@@ -437,14 +414,12 @@ const MyAccount = () => {
                 </div>
               </div>
 
-              <div className="xl:max-w-[370px] w-full bg-white shadow-1 rounded-xl">
-                <div className="flex items-center justify-between py-5 px-4 sm:pl-7.5 sm:pr-6 border-b border-gray-3">
-                  <p className="font-medium text-xl text-dark">
-                    Billing Address
-                  </p>
+              <div className="w-full rounded-xl bg-white shadow-1 xl:max-w-[370px]">
+                <div className="flex items-center justify-between border-b border-gray-3 px-4 py-5 sm:pl-7.5 sm:pr-6">
+                  <p className="text-xl font-medium text-dark">Billing Address</p>
 
                   <button
-                    className="text-dark ease-out duration-200 hover:text-blue"
+                    className="text-dark duration-200 ease-out hover:text-blue"
                     onClick={openAddressModal}
                   >
                     <svg
@@ -542,7 +517,7 @@ const MyAccount = () => {
 
                     <p className="flex gap-2.5 text-custom-sm">
                       <svg
-                        className="fill-current mt-0.5"
+                        className="mt-0.5 fill-current"
                         width="18"
                         height="18"
                         viewBox="0 0 18 18"
@@ -573,15 +548,15 @@ const MyAccount = () => {
 
           <!-- details tab content start --> */}
             <div
-              className={`xl:max-w-[770px] w-full ${
-                activeTab === "account-details" ? "block" : "hidden"
+              className={`w-full xl:max-w-[770px] ${
+                activeTab === 'account-details' ? 'block' : 'hidden'
               }`}
             >
               <form>
-                <div className="bg-white shadow-1 rounded-xl p-4 sm:p-8.5">
-                  <div className="flex flex-col lg:flex-row gap-5 sm:gap-8 mb-5">
+                <div className="rounded-xl bg-white p-4 shadow-1 sm:p-8.5">
+                  <div className="mb-5 flex flex-col gap-5 sm:gap-8 lg:flex-row">
                     <div className="w-full">
-                      <label htmlFor="firstName" className="block mb-2.5">
+                      <label htmlFor="firstName" className="mb-2.5 block">
                         First Name <span className="text-red">*</span>
                       </label>
 
@@ -591,12 +566,12 @@ const MyAccount = () => {
                         id="firstName"
                         placeholder="Jhon"
                         value="Jhon"
-                        className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                        className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                       />
                     </div>
 
                     <div className="w-full">
-                      <label htmlFor="lastName" className="block mb-2.5">
+                      <label htmlFor="lastName" className="mb-2.5 block">
                         Last Name <span className="text-red">*</span>
                       </label>
 
@@ -606,18 +581,18 @@ const MyAccount = () => {
                         id="lastName"
                         placeholder="Deo"
                         value="Deo"
-                        className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                        className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                       />
                     </div>
                   </div>
 
                   <div className="mb-5">
-                    <label htmlFor="countryName" className="block mb-2.5">
+                    <label htmlFor="countryName" className="mb-2.5 block">
                       Country/ Region <span className="text-red">*</span>
                     </label>
 
                     <div className="relative">
-                      <select className="w-full bg-gray-1 rounded-md border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-none focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20">
+                      <select className="w-full appearance-none rounded-md border border-gray-3 bg-gray-1 py-3 pl-5 pr-9 text-dark-4 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20">
                         <option value="0">Australia</option>
                         <option value="1">America</option>
                         <option value="2">England</option>
@@ -645,24 +620,21 @@ const MyAccount = () => {
 
                   <button
                     type="submit"
-                    className="inline-flex font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark"
+                    className="inline-flex rounded-md bg-blue px-7 py-3 font-medium text-white duration-200 ease-out hover:bg-blue-dark"
                   >
                     Save Changes
                   </button>
                 </div>
 
-                <p className="text-custom-sm mt-5 mb-9">
-                  This will be how your name will be displayed in the account
-                  section and in reviews
+                <p className="mb-9 mt-5 text-custom-sm">
+                  This will be how your name will be displayed in the account section and in reviews
                 </p>
 
-                <p className="font-medium text-xl sm:text-2xl text-dark mb-7">
-                  Password Change
-                </p>
+                <p className="mb-7 text-xl font-medium text-dark sm:text-2xl">Password Change</p>
 
-                <div className="bg-white shadow-1 rounded-xl p-4 sm:p-8.5">
+                <div className="rounded-xl bg-white p-4 shadow-1 sm:p-8.5">
                   <div className="mb-5">
-                    <label htmlFor="oldPassword" className="block mb-2.5">
+                    <label htmlFor="oldPassword" className="mb-2.5 block">
                       Old Password
                     </label>
 
@@ -671,12 +643,12 @@ const MyAccount = () => {
                       name="oldPassword"
                       id="oldPassword"
                       autoComplete="on"
-                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                      className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                     />
                   </div>
 
                   <div className="mb-5">
-                    <label htmlFor="newPassword" className="block mb-2.5">
+                    <label htmlFor="newPassword" className="mb-2.5 block">
                       New Password
                     </label>
 
@@ -685,15 +657,12 @@ const MyAccount = () => {
                       name="newPassword"
                       id="newPassword"
                       autoComplete="on"
-                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                      className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                     />
                   </div>
 
                   <div className="mb-5">
-                    <label
-                      htmlFor="confirmNewPassword"
-                      className="block mb-2.5"
-                    >
+                    <label htmlFor="confirmNewPassword" className="mb-2.5 block">
                       Confirm New Password
                     </label>
 
@@ -702,13 +671,13 @@ const MyAccount = () => {
                       name="confirmNewPassword"
                       id="confirmNewPassword"
                       autoComplete="on"
-                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                      className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="inline-flex font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark"
+                    className="inline-flex rounded-md bg-blue px-7 py-3 font-medium text-white duration-200 ease-out hover:bg-blue-dark"
                   >
                     Change Password
                   </button>

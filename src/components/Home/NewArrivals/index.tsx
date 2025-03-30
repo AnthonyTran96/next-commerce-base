@@ -1,17 +1,15 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import ProductItem from "@/components/Common/ProductItem";
-import shopData from "@/components/Shop/shopData";
+import ProductItem from '@/components/Common/ProductItem';
+import shopData from '@/components/Shop/shopData';
+import Link from 'next/link';
 
 const NewArrival = () => {
   return (
     <section className="overflow-hidden pt-15">
-      <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
+      <div className="mx-auto w-full max-w-[1170px] px-4 sm:px-8 xl:px-0">
         {/* <!-- section title --> */}
         <div className="mb-7 flex items-center justify-between">
           <div>
-            <span className="flex items-center gap-2.5 font-medium text-dark mb-1.5">
+            <span className="mb-1.5 flex items-center gap-2.5 font-medium text-dark">
               <svg
                 width="20"
                 height="20"
@@ -33,20 +31,18 @@ const NewArrival = () => {
               </svg>
               This Week’s
             </span>
-            <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
-              New Arrivals
-            </h2>
+            <h2 className="text-xl font-semibold text-dark xl:text-heading-5">New Arrivals</h2>
           </div>
 
           <Link
             href="/shop-with-sidebar"
-            className="inline-flex font-medium text-custom-sm py-2.5 px-7 rounded-md border-gray-3 border bg-gray-1 text-dark ease-out duration-200 hover:bg-dark hover:text-white hover:border-transparent"
+            className="inline-flex rounded-md border border-gray-3 bg-gray-1 px-7 py-2.5 text-custom-sm font-medium text-dark duration-200 ease-out hover:border-transparent hover:bg-dark hover:text-white"
           >
             View All
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-7.5 gap-y-9">
+        <div className="grid grid-cols-1 gap-x-7.5 gap-y-9 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {/* <!-- New Arrivals item --> */}
           {shopData.map((item, key) => (
             <ProductItem item={item} key={key} />

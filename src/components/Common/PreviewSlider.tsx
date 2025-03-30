@@ -1,19 +1,18 @@
-"use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { useCallback, useRef } from "react";
-import "swiper/css/navigation";
-import "swiper/css";
-import Image from "next/image";
+'use client';
+import Image from 'next/image';
+import { useCallback, useRef } from 'react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 
-import { usePreviewSlider } from "@/app/context/PreviewSliderContext";
-import { useAppSelector } from "@/redux/store";
+import { usePreviewSlider } from '@/app/context/PreviewSliderContext';
 
 const PreviewSliderModal = () => {
   const { closePreviewModal, isModalPreviewOpen } = usePreviewSlider();
 
-  const data = useAppSelector((state) => state.productDetailsReducer.value);
+  // const data = useAppSelector((state) => state.productDetailsReducer.value);
 
-  const sliderRef = useRef(null);
+  const sliderRef = useRef<SwiperRef>(null);
 
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
@@ -27,14 +26,14 @@ const PreviewSliderModal = () => {
 
   return (
     <div
-      className={`preview-slider w-full h-screen  z-999999 inset-0 flex justify-center items-center bg-[#000000F2] bg-opacity-70 ${
-        isModalPreviewOpen ? "fixed" : "hidden"
+      className={`preview-slider inset-0 z-999999  flex h-screen w-full items-center justify-center bg-[#000000F2] bg-opacity-70 ${
+        isModalPreviewOpen ? 'fixed' : 'hidden'
       }`}
     >
       <button
         onClick={() => closePreviewModal()}
         aria-label="button for close modal"
-        className="absolute top-0 right-0 sm:top-6 sm:right-6 flex items-center justify-center w-10 h-10 rounded-full ease-in duration-150 text-white hover:text-meta-5 z-10"
+        className="absolute right-0 top-0 z-10 flex h-10 w-10 items-center justify-center rounded-full text-white duration-150 ease-in hover:text-meta-5 sm:right-6 sm:top-6"
       >
         <svg
           className="fill-current"
@@ -55,7 +54,7 @@ const PreviewSliderModal = () => {
 
       <div>
         <button
-          className="rotate-180 absolute left-100 p-5 cursor-pointer z-10 "
+          className="absolute left-100 z-10 rotate-180 cursor-pointer p-5 "
           onClick={handlePrev}
         >
           <svg
@@ -74,10 +73,7 @@ const PreviewSliderModal = () => {
           </svg>
         </button>
 
-        <button
-          className="absolute right-100 p-5 cursor-pointer z-10"
-          onClick={handleNext}
-        >
+        <button className="absolute right-100 z-10 cursor-pointer p-5" onClick={handleNext}>
           <svg
             width="36"
             height="36"
@@ -97,10 +93,10 @@ const PreviewSliderModal = () => {
 
       <Swiper ref={sliderRef} slidesPerView={1} spaceBetween={20}>
         <SwiperSlide>
-          <div className="flex justify-center items-center">
+          <div className="flex items-center justify-center">
             <Image
-              src={"/images/products/product-2-bg-1.png"}
-              alt={"product image"}
+              src={'/images/products/product-2-bg-1.png'}
+              alt={'product image'}
               width={450}
               height={450}
             />

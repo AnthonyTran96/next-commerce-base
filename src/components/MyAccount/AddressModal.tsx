@@ -1,38 +1,38 @@
-import React, { useEffect } from "react";
+import { useEffect } from 'react';
 
-const AddressModal = ({ isOpen, closeModal }) => {
+const AddressModal = ({ isOpen, closeModal }: { isOpen: boolean; closeModal: () => void }) => {
   useEffect(() => {
     // closing modal while clicking outside
-    function handleClickOutside(event) {
-      if (!event.target.closest(".modal-content")) {
+    function handleClickOutside(event: any) {
+      if (!event.target.closest('.modal-content')) {
         closeModal();
       }
     }
 
     if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isOpen, closeModal]);
 
   return (
     <div
-      className={`fixed top-0 left-0 overflow-y-auto no-scrollbar w-full h-screen sm:py-20 xl:py-25 2xl:py-[230px] bg-dark/70 sm:px-8 px-4 py-5 ${
-        isOpen ? "block z-99999" : "hidden"
+      className={`no-scrollbar fixed left-0 top-0 h-screen w-full overflow-y-auto bg-dark/70 px-4 py-5 sm:px-8 sm:py-20 xl:py-25 2xl:py-[230px] ${
+        isOpen ? 'z-99999 block' : 'hidden'
       }`}
     >
       <div className="flex items-center justify-center ">
         <div
           x-show="addressModal"
-          className="w-full max-w-[1100px] rounded-xl shadow-3 bg-white p-7.5 relative modal-content"
+          className="modal-content relative w-full max-w-[1100px] rounded-xl bg-white p-7.5 shadow-3"
         >
           <button
             onClick={closeModal}
             aria-label="button for close modal"
-            className="absolute top-0 right-0 sm:top-3 sm:right-3 flex items-center justify-center w-10 h-10 rounded-full ease-in duration-150 bg-meta text-body hover:text-dark"
+            className="absolute right-0 top-0 flex h-10 w-10 items-center justify-center rounded-full bg-meta text-body duration-150 ease-in hover:text-dark sm:right-3 sm:top-3"
           >
             <svg
               className="fill-current"
@@ -53,9 +53,9 @@ const AddressModal = ({ isOpen, closeModal }) => {
 
           <div>
             <form>
-              <div className="flex flex-col lg:flex-row gap-5 sm:gap-8 mb-5">
+              <div className="mb-5 flex flex-col gap-5 sm:gap-8 lg:flex-row">
                 <div className="w-full">
-                  <label htmlFor="name" className="block mb-2.5">
+                  <label htmlFor="name" className="mb-2.5 block">
                     Name
                   </label>
 
@@ -63,12 +63,12 @@ const AddressModal = ({ isOpen, closeModal }) => {
                     type="text"
                     name="name"
                     value="James Septimus"
-                    className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                    className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                   />
                 </div>
 
                 <div className="w-full">
-                  <label htmlFor="email" className="block mb-2.5">
+                  <label htmlFor="email" className="mb-2.5 block">
                     Email
                   </label>
 
@@ -76,14 +76,14 @@ const AddressModal = ({ isOpen, closeModal }) => {
                     type="email"
                     name="email"
                     value="jamse@example.com"
-                    className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                    className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                   />
                 </div>
               </div>
 
-              <div className="flex flex-col lg:flex-row gap-5 sm:gap-8 mb-5">
+              <div className="mb-5 flex flex-col gap-5 sm:gap-8 lg:flex-row">
                 <div className="w-full">
-                  <label htmlFor="phone" className="block mb-2.5">
+                  <label htmlFor="phone" className="mb-2.5 block">
                     Phone
                   </label>
 
@@ -91,12 +91,12 @@ const AddressModal = ({ isOpen, closeModal }) => {
                     type="text"
                     name="phone"
                     value="1234 567890"
-                    className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                    className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                   />
                 </div>
 
                 <div className="w-full">
-                  <label htmlFor="address" className="block mb-2.5">
+                  <label htmlFor="address" className="mb-2.5 block">
                     Address
                   </label>
 
@@ -104,14 +104,14 @@ const AddressModal = ({ isOpen, closeModal }) => {
                     type="text"
                     name="address"
                     value="7398 Smoke Ranch RoadLas Vegas, Nevada 89128"
-                    className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                    className="w-full rounded-md border border-gray-3 bg-gray-1 px-5 py-2.5 outline-none duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                   />
                 </div>
               </div>
 
               <button
                 type="submit"
-                className="inline-flex font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark"
+                className="inline-flex rounded-md bg-blue px-7 py-3 font-medium text-white duration-200 ease-out hover:bg-blue-dark"
               >
                 Save Changes
               </button>

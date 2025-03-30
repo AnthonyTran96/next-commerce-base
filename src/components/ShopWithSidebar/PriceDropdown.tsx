@@ -7,23 +7,21 @@ const PriceDropdown = () => {
 
   const [selectedPrice, setSelectedPrice] = useState({
     from: 0,
-    to: 100,
+    to: 100
   });
 
   return (
-    <div className="bg-white shadow-1 rounded-lg">
+    <div className="rounded-lg bg-white shadow-1">
       <div
         onClick={() => setToggleDropdown(!toggleDropdown)}
-        className="cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5"
+        className="flex cursor-pointer items-center justify-between py-3 pl-6 pr-5.5"
       >
         <p className="text-dark">Price</p>
         <button
           onClick={() => setToggleDropdown(!toggleDropdown)}
           id="price-dropdown-btn"
           aria-label="button for price dropdown"
-          className={`text-dark ease-out duration-200 ${
-            toggleDropdown && 'rotate-180'
-          }`}
+          className={`text-dark duration-200 ease-out ${toggleDropdown && 'rotate-180'}`}
         >
           <svg
             className="fill-current"
@@ -54,25 +52,21 @@ const PriceDropdown = () => {
               onInput={(e) =>
                 setSelectedPrice({
                   from: Math.floor(e[0]),
-                  to: Math.ceil(e[1]),
+                  to: Math.ceil(e[1])
                 })
               }
             />
 
             <div className="price-amount flex items-center justify-between pt-4">
-              <div className="text-custom-xs text-dark-4 flex rounded border border-gray-3/80">
-                <span className="block border-r border-gray-3/80 px-2.5 py-1.5">
-                  $
-                </span>
+              <div className="flex rounded border border-gray-3/80 text-custom-xs text-dark-4">
+                <span className="block border-r border-gray-3/80 px-2.5 py-1.5">$</span>
                 <span id="minAmount" className="block px-3 py-1.5">
                   {selectedPrice.from}
                 </span>
               </div>
 
-              <div className="text-custom-xs text-dark-4 flex rounded border border-gray-3/80">
-                <span className="block border-r border-gray-3/80 px-2.5 py-1.5">
-                  $
-                </span>
+              <div className="flex rounded border border-gray-3/80 text-custom-xs text-dark-4">
+                <span className="block border-r border-gray-3/80 px-2.5 py-1.5">$</span>
                 <span id="maxAmount" className="block px-3 py-1.5">
                   {selectedPrice.to}
                 </span>

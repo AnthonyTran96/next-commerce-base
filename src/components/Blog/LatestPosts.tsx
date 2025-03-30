@@ -1,12 +1,12 @@
-import Link from "next/link";
-import React from "react";
-import Image from "next/image";
+import { BlogItem } from '@/types/blogItem';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const LatestPosts = ({ blogs }) => {
+const LatestPosts = ({ blogs }: { blogs: BlogItem[] }) => {
   return (
-    <div className="shadow-1 bg-white rounded-xl mt-7.5">
-      <div className="px-4 sm:px-6 py-4.5 border-b border-gray-3">
-        <h2 className="font-medium text-lg text-dark">Recent Posts</h2>
+    <div className="mt-7.5 rounded-xl bg-white shadow-1">
+      <div className="border-b border-gray-3 px-4 py-4.5 sm:px-6">
+        <h2 className="text-lg font-medium text-dark">Recent Posts</h2>
       </div>
 
       <div className="p-4 sm:p-6">
@@ -17,37 +17,31 @@ const LatestPosts = ({ blogs }) => {
             <div className="flex items-center gap-4" key={key}>
               <Link
                 href="/blogs/blog-details-with-sidebar"
-                className="max-w-[110px] w-full rounded-[10px] overflow-hidden"
+                className="w-full max-w-[110px] overflow-hidden rounded-[10px]"
               >
                 <Image
                   src={blog.img}
                   alt="blog"
-                  className="rounded-[10px] w-full"
+                  className="w-full rounded-[10px]"
                   width={110}
                   height={80}
                 />
               </Link>
 
               <div>
-                <h3 className="text-dark leading-[22px] ease-out duration-200 mb-1.5 hover:text-blue">
+                <h3 className="mb-1.5 leading-[22px] text-dark duration-200 ease-out hover:text-blue">
                   <Link href="/blogs/blog-details-with-sidebar">{blog.title}</Link>
                 </h3>
 
                 <span className="flex items-center gap-3">
-                  <a
-                    href="#"
-                    className="text-custom-xs ease-out duration-200 hover:text-blue"
-                  >
+                  <a href="#" className="text-custom-xs duration-200 ease-out hover:text-blue">
                     {blog.date}
                   </a>
 
                   {/* <!-- divider --> */}
-                  <span className="block w-px h-4 bg-gray-4"></span>
+                  <span className="block h-4 w-px bg-gray-4"></span>
 
-                  <a
-                    href="#"
-                    className="text-custom-xs ease-out duration-200 hover:text-blue"
-                  >
+                  <a href="#" className="text-custom-xs duration-200 ease-out hover:text-blue">
                     {blog.views}k Views
                   </a>
                 </span>

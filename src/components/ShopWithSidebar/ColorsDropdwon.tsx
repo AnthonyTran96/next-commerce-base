@@ -1,26 +1,24 @@
-"use client";
-import React, { useState } from "react";
+'use client';
+import React, { useState } from 'react';
 
 const ColorsDropdwon = () => {
   const [toggleDropdown, setToggleDropdown] = useState(true);
-  const [activeColor, setActiveColor] = useState("blue");
+  const [activeColor, setActiveColor] = useState('blue');
 
-  const colors = ["red", "blue", "orange", "pink", "purple"];
+  const colors = ['red', 'blue', 'orange', 'pink', 'purple'];
 
   return (
-    <div className="bg-white shadow-1 rounded-lg">
+    <div className="rounded-lg bg-white shadow-1">
       <div
         onClick={() => setToggleDropdown(!toggleDropdown)}
-        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 ${
-          toggleDropdown && "shadow-filter"
+        className={`flex cursor-pointer items-center justify-between py-3 pl-6 pr-5.5 ${
+          toggleDropdown && 'shadow-filter'
         }`}
       >
         <p className="text-dark">Colors</p>
         <button
           aria-label="button for colors dropdown"
-          className={`text-dark ease-out duration-200 ${
-            toggleDropdown && "rotate-180"
-          }`}
+          className={`text-dark duration-200 ease-out ${toggleDropdown && 'rotate-180'}`}
         >
           <svg
             className="fill-current"
@@ -41,17 +39,9 @@ const ColorsDropdwon = () => {
       </div>
 
       {/* <!-- dropdown menu --> */}
-      <div
-        className={`flex-wrap gap-2.5 p-6 ${
-          toggleDropdown ? "flex" : "hidden"
-        }`}
-      >
+      <div className={`flex-wrap gap-2.5 p-6 ${toggleDropdown ? 'flex' : 'hidden'}`}>
         {colors.map((color, key) => (
-          <label
-            key={key}
-            htmlFor={color}
-            className="cursor-pointer select-none flex items-center"
-          >
+          <label key={key} htmlFor={color} className="flex cursor-pointer select-none items-center">
             <div className="relative">
               <input
                 type="radio"
@@ -61,13 +51,13 @@ const ColorsDropdwon = () => {
                 onChange={() => setActiveColor(color)}
               />
               <div
-                className={`flex items-center justify-center w-5.5 h-5.5 rounded-full ${
-                  activeColor === color && "border"
+                className={`flex h-5.5 w-5.5 items-center justify-center rounded-full ${
+                  activeColor === color && 'border'
                 }`}
                 style={{ borderColor: `${color}` }}
               >
                 <span
-                  className="block w-3 h-3 rounded-full"
+                  className="block h-3 w-3 rounded-full"
                   style={{ backgroundColor: `${color}` }}
                 ></span>
               </div>
