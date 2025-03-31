@@ -1,5 +1,5 @@
-"use client";
-import { useEffect, useState } from "react";
+'use client';
+import { useEffect, useState } from 'react';
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,7 +9,7 @@ export default function ScrollToTop() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth'
     });
   };
 
@@ -23,22 +23,24 @@ export default function ScrollToTop() {
       }
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility);
 
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
   return (
     <>
       {isVisible && (
         <button
+          type="button"
+          title="scroll"
           onClick={scrollToTop}
-          className={`items-center justify-center w-10 h-10 rounded-[4px] shadow-lg bg-blue ease-out duration-200 hover:bg-blue-dark fixed bottom-8 right-8 z-999 ${
-            isVisible ? "flex" : "hidden"
+          className={`fixed bottom-8 right-8 z-999 h-10 w-10 items-center justify-center rounded-[4px] bg-blue shadow-lg duration-200 ease-out hover:bg-blue-dark ${
+            isVisible ? 'flex' : 'hidden'
           }`}
         >
           <svg
-            className="fill-white w-5 h-5"
+            className="h-5 w-5 fill-white"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
           >

@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  @apply h-full;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgb(var(--color-400));
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+h1 {
+  font-size: theme('fontSize.56');
+  line-height: theme('lineHeight.120p');
+}
+
+h2 {
+  font-size: theme('fontSize.40');
+  line-height: theme('lineHeight.120p');
+}
+
+h3 {
+  font-size: theme('fontSize.28');
+  line-height: theme('lineHeight.120p');
+}
+
+h4 {
+  font-size: theme('fontSize.20');
+  line-height: theme('lineHeight.120p');
+}
+
+h5 {
+  font-size: theme('fontSize.16');
+  line-height: theme('lineHeight.120p');
+}
+
+p, div, span {
+  line-height: theme('lineHeight.150p');
+}
