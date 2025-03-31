@@ -1,3 +1,4 @@
+'use client';
 import '@/styles/euclid-circular-a-font.css';
 import '@/styles/global.css';
 

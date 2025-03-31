@@ -1,5 +1,3 @@
-import React from 'react';
-
 const SearchForm = () => {
   return (
     <div className="rounded-xl bg-white shadow-1">
@@ -15,7 +13,11 @@ const SearchForm = () => {
               placeholder="Search here..."
               className="w-full rounded-md border border-gray-3 py-3 pl-5 pr-13 outline-none duration-200 ease-out placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
             />
-            <button className="absolute right-0 top-0 px-4 py-3.5 text-dark-2 duration-200 ease-out hover:text-blue">
+            <button
+              type="button"
+              title="search"
+              className="absolute right-0 top-0 px-4 py-3.5 text-dark-2 duration-200 ease-out hover:text-blue"
+            >
               <svg
                 className="fill-current"
                 width="20"

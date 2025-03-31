@@ -95,6 +95,8 @@ const QuickViewModal = () => {
                 <div className="flex flex-col gap-5">
                   {product?.imgs?.thumbnails?.map((img, key) => (
                     <button
+                      type="button"
+                      title="set"
                       onClick={() => setActivePreview(key)}
                       key={key}
                       className={`flex h-20 w-20 items-center justify-center overflow-hidden rounded-lg bg-gray-1 duration-200 ease-out hover:border-2 hover:border-blue ${

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import toast from 'react-hot-toast';
 
 const EditOrder = ({ order, toggleModal }: any) => {
@@ -23,6 +23,7 @@ const EditOrder = ({ order, toggleModal }: any) => {
       <p className="pb-2 font-medium text-dark">Order Status</p>
       <div className="w-full">
         <select
+          title="status"
           className="w-full rounded-[10px] border border-gray-3 bg-gray-1 px-5 py-3.5 text-custom-sm text-dark"
           name="status"
           id="status"

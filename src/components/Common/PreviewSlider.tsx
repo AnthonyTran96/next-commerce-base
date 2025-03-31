@@ -54,6 +54,8 @@ const PreviewSliderModal = () => {
 
       <div>
         <button
+          type="button"
+          title="slider"
           className="absolute left-100 z-10 rotate-180 cursor-pointer p-5 "
           onClick={handlePrev}
         >
@@ -73,7 +75,12 @@ const PreviewSliderModal = () => {
           </svg>
         </button>
 
-        <button className="absolute right-100 z-10 cursor-pointer p-5" onClick={handleNext}>
+        <button
+          type="button"
+          title="slider"
+          className="absolute right-100 z-10 cursor-pointer p-5"
+          onClick={handleNext}
+        >
           <svg
             width="36"
             height="36"

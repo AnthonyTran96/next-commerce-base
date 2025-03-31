@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const ColorsDropdwon = () => {
   const [toggleDropdown, setToggleDropdown] = useState(true);
@@ -44,6 +44,7 @@ const ColorsDropdwon = () => {
           <label key={key} htmlFor={color} className="flex cursor-pointer select-none items-center">
             <div className="relative">
               <input
+                title="color"
                 type="radio"
                 name="color"
                 id={color}
