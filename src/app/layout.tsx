@@ -2,7 +2,7 @@
 import '@/styles/euclid-circular-a-font.css';
 import '@/styles/global.css';
 
-import PreLoader from '@/components/Common/PreLoader';
+import PreLoader from '@/components/common/PreLoader';
 import { useEffect, useState } from 'react';
 import ProviderWrapper from './ProviderWrapper';
 
