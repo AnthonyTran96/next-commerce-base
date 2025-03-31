@@ -47,7 +47,7 @@ const Locales = ({ children }: { children: ReactNode }) => {
   return (
     <>
       {messages && (
-        <IntlProvider locale={i18n} defaultLocale="en" messages={messages}>
+        <IntlProvider locale={i18n} defaultLocale="vi" messages={messages}>
           {children}
         </IntlProvider>
       )}

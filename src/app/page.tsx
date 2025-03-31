@@ -1,4 +1,5 @@
 import ButtonBase from '@/components/button';
+import I18nMessage from '@/components/locales/i18-text';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -32,20 +33,7 @@ export default function HomePage() {
         />
       </div>
       <div className="flex gap-10">
-        {/* <ProductCard
-          sold={712}
-          quantity={1000}
-          name="Xịt Hold On Tăng cường Sinh lý nam "
-          discount={29}
-          isNew
-          startPrice={2850000}
-          endPrice={5350000}
-          rating={4.5}
-          rateCount={3176}
-          image="https://feelex.vn/wp-content/uploads/2024/03/xit-keo-dai-XY-Value-Hold-on.jpg"
-          hoverImage="https://feelex.vn/wp-content/uploads/2024/10/Bao-cao-su-rau-rong.jpg"
-          href="https://www.facebook.com/"
-        /> */}
+        <I18nMessage id="coming-soon" />
       </div>
     </div>
   );

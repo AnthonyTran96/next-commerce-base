@@ -11,17 +11,17 @@ const initialState = {
 const LanguageContext = createContext(initialState);
 
 function LanguageProvider({ children }: { children: ReactElement }) {
-  const [i18n, setI18] = useLocalStorage('app-language', initialState);
+  const [locale, setLocale] = useLocalStorage('app-language', initialState.i18n);
   const onChangeLocalization = (lang: I18n) => {
-    setI18(lang);
+    setLocale(lang);
   };
 
   const store = useMemo(
     () => ({
-      i18n,
+      i18n: locale,
       onChangeLocalization
     }),
-    [i18n]
+    [locale]
   );
 
   return <LanguageContext.Provider value={store}>{children}</LanguageContext.Provider>;
