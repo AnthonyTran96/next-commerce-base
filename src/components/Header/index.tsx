@@ -1,5 +1,4 @@
 'use client';
-import { useCartModalContext } from '@/app/context/CartSidebarModalContext';
 import { selectTotalPrice } from '@/redux/features/cart-slice';
 import { useAppSelector } from '@/redux/store';
 import Image from 'next/image';
@@ -14,14 +13,9 @@ const Header = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
-  const { openCartModal } = useCartModalContext();
 
   const product = useAppSelector((state) => state.cartReducer.items);
   const totalPrice = useSelector(selectTotalPrice);
-
-  const handleOpenCartModal = () => {
-    openCartModal();
-  };
 
   // Sticky menu
   const handleStickyMenu = () => {
@@ -177,7 +171,7 @@ const Header = () => {
                   </div>
                 </Link>
 
-                <button onClick={handleOpenCartModal} className="flex items-center gap-2.5">
+                <button onClick={() => {}} className="flex items-center gap-2.5">
                   <span className="relative inline-block">
                     <svg
                       width="24"
