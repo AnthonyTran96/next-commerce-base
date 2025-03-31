@@ -102,7 +102,7 @@ const QuickViewModal = () => {
                       }`}
                     >
                       <Image
-                        src={img || ''}
+                        src={img}
                         alt="thumbnail"
                         width={61}
                         height={61}
