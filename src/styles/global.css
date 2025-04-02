@@ -7,6 +7,18 @@ html {
   @apply h-full;
 }
 
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
@@ -62,6 +74,8 @@ h5 {
   line-height: theme('lineHeight.120p');
 }
 
-p, div, span {
+p,
+div,
+span {
   line-height: theme('lineHeight.150p');
 }

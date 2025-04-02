@@ -28,4 +28,3 @@ function LanguageProvider({ children }: { children: ReactElement }) {
 }
 
 export { LanguageContext, LanguageProvider };
-
