@@ -31,6 +31,7 @@
     "@types/react-dom": "19.0.4",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.15.0",
+    "@svgr/webpack": "^8.1.0",
     "autoprefixer": "10.4.15",
     "env-cmd": "^10.1.0",
     "eslint": "8.49.0",

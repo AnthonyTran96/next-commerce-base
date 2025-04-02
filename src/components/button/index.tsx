@@ -1,14 +1,15 @@
 'use client';
 
-import Image, { ImageProps } from 'next/image';
 import React from 'react';
+import Icon, { IconProps } from '../icon';
+import Spinner from '../spiner';
 
 type CustomButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: 'primary' | 'secondary' | 'whiteGhost';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'custom';
   isLoading?: boolean;
-  iconLeft?: ImageProps;
-  customLeftt?: React.ReactNode;
-  iconRight?: ImageProps;
+  iconLeft?: IconProps;
+  customLeft?: React.ReactNode;
+  iconRight?: IconProps;
   customRight?: React.ReactNode;
 };
 
@@ -16,7 +17,7 @@ const ButtonBase: React.FC<CustomButtonProps> = ({
   variant = 'primary',
   isLoading = false,
   iconLeft,
-  customLeftt,
+  customLeft,
   customRight,
   iconRight,
   className,
@@ -24,41 +25,33 @@ const ButtonBase: React.FC<CustomButtonProps> = ({
   ...rest
 }) => {
   const baseStyle =
-    'inline-flex items-center gap-4 px-10 py-6 rounded-radius-m font-semibold text-15 transition-all duration-200';
+    'inline-flex items-center gap-1 p-2.5 rounded-lg font-semibold text-16 leading-125p transition-all duration-200';
   const variants = {
-    primary: 'bg-orange-500 text-orange-50 hover:bg-blue-700',
-    secondary: 'bg-orange-50 text-orange-500 hover:bg-gray-300',
-    whiteGhost: 'bg-gray-500 text-black border-weight-s hover:bg-gray-300'
+    primary: 'bg-blue_dark-500 text-common-white hover:bg-blue_dark-400',
+    secondary: 'bg-blue_dark-50 text-default-medium hover:bg-blue_dark-100',
+    ghost: 'bg-common-white text-blue_dark-500 hover:bg-blue_dark-50',
+    custom: ''
   };
 
   return (
     <button
+      type={rest.type || 'button'}
       className={`${baseStyle} ${variants[variant]} ${className ?? ''}`}
       disabled={isLoading || rest.disabled}
       {...rest}
     >
       {/* Icon trái */}
-      {customLeftt}
-      {iconLeft && !customLeftt && (
-        <Image
-          {...iconLeft}
-          alt={iconLeft.alt || 'icon'}
-          width={iconLeft.width || 27}
-          height={iconLeft.height || 27}
-        />
+      {customLeft}
+      {iconLeft && !customLeft && (
+        <Icon {...iconLeft} className={`h-7.5 w-7.5 ${iconLeft.className}`} />
       )}
 
-      {isLoading ? 'Loading...' : children}
+      {isLoading ? <Spinner /> : children}
 
       {/* Icon phải */}
       {customRight}
       {iconRight && !customRight && (
-        <Image
-          {...iconRight}
-          alt={iconRight.alt || 'icon'}
-          width={iconRight.width || 27}
-          height={iconRight.height || 27}
-        />
+        <Icon {...iconRight} className={`h-7.5 w-7.5 ${iconRight.className}`} />
       )}
     </button>
   );

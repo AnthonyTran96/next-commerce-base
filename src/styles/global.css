@@ -62,6 +62,8 @@ h5 {
   line-height: theme('lineHeight.120p');
 }
 
-p, div, span {
+p,
+div,
+span {
   line-height: theme('lineHeight.150p');
 }
