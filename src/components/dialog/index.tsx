@@ -40,8 +40,8 @@ const Dialog: React.FC<DialogProps> = ({
   return (
     <div
       className={`
-        fixed inset-0 z-9999 flex items-center justify-center
-        bg-[rgb(28_39_76/_0.7)] transition-opacity duration-300
+        fixed inset-0 z-9999 flex items-center justify-center bg-[rgb(28_39_76/_0.7)]
+        pb-[10vh] transition-opacity duration-300
         ${isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'}
         ${overlayClassName}
       `}

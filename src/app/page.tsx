@@ -1,6 +1,7 @@
 import ButtonBase from '@/components/button';
 import Icon from '@/components/icon';
 import I18nMessage from '@/components/locales/i18-text';
+import Popover from '@/components/popover';
 import DialogTest from '@/components/test/dialog';
 import { DialogProvider } from '@/components/test/dialogContext';
 import DrawerTest from '@/components/test/drawer';
@@ -58,6 +59,14 @@ export default function HomePage() {
           <DialogProvider>
             <DialogTest />
           </DialogProvider>
+        </div>
+      </div>
+      <div className="flex flex-col gap-2">
+        <h4>Tippy </h4>
+        <div className="flex gap-2">
+          <Popover content="Hello">
+            <div>My button</div>
+          </Popover>
         </div>
       </div>
     </div>
